@@ -15,7 +15,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "deploy": "npm run gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "license": "ISC",
   "homepage": "https://tensaiscorner.github.io/tensaiscorner-page",
