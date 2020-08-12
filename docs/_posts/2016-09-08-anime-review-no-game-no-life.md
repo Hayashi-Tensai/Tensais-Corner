@@ -5,9 +5,10 @@ date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review
 ---
 
-
 Konnichiwa minna! Today i would like to share another good anime i have watched :D 
 This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.
+
+![NoGameNoLife_Poster](https://tensaiscorner.com/assets/blog-images/No_game_no_life.jpg)
 
 Story - 9/10
 
