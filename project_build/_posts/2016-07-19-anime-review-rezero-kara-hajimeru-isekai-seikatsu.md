@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Anime Review! - Re:Zero kara Hajimeru Isekai Seikatsu"
+permalink: blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu
 date:   2016-07-19 19:28:00 +0800
 categories: anime anime-review
 ---

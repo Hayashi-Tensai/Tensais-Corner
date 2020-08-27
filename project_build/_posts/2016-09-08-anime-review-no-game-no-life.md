@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Anime Review! - No Game No Life"
+permalink: blog/2016/09/08/anime-review-no-game-no-life
 date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review
 slideShow:
