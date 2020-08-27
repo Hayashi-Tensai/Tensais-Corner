@@ -3,12 +3,24 @@ layout: post
 title:  "Anime Review! - No Game No Life"
 date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review
+slideShow:
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_1.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_2.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_3.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_4.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_sora.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_shiro.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_steph.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_chlammy.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_Jibril.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_izuna.png
+- https://tensaiscorner.com/assets/blog-images/anime/ngnl_tet.png
 ---
 
 Konnichiwa minna! Today i would like to share another good anime i have watched :D 
 This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.
 
-![NoGameNoLife_Poster](https://tensaiscorner.com/assets/blog-images/No_game_no_life.jpg)
+![NoGameNoLife_Poster](https://tensaiscorner.com/assets/blog-images/anime/No_game_no_life.jpg)
 
 Story - 9/10
 
@@ -38,18 +50,7 @@ The town has a really interesting design of having that vibe of an old town, the
 Character Design
 
 Overall i would say the characters are quite detailed compared to other anime(s) out there, but still i would not comment much on this because my art suck to be honest.
-**[Embed Slideshow pending]**
-Town_1
-Town_2
-Town_3
-Town_4
-Sora
-Shiro
-Steph
-Chlammy
-Jibril
-Izumo
-Tet
-**[Embed Slideshow pending]**
+
+<div>{%- include slideShow.html images=page.slideShow -%}</div>
 
 In conclusion, i would really comment this anime as it has a lot of fun and adventure with strategies and tricks along the way.

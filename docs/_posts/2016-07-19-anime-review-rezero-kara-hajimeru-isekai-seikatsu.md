@@ -13,7 +13,7 @@ This review is made based on Episode 1-15
 
 So as for today i am going to write a review on this anime most commonly known as Re: Zero.
 
-![Re-Zero_Poster](https://tensaiscorner.com\assets\blog-images\re_zero.jpg)
+![Re-Zero_Poster](https://tensaiscorner.com/assets/blog-images/anime/re_zero.jpg)
 
 A friend of mine asked me to give a review on this anime, so i decided to make this my first blog post.
 
