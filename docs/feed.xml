@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-27T12:26:54+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle></subtitle><entry><title type="html">Anime Review! - No Game No Life</title><link href="http://localhost:4000/anime/anime-review/2016/09/08/anime-review-no-game-no-life.html" rel="alternate" type="text/html" title="Anime Review! - No Game No Life" /><published>2016-09-08T11:23:00+08:00</published><updated>2016-09-08T11:23:00+08:00</updated><id>http://localhost:4000/anime/anime-review/2016/09/08/anime-review-no-game-no-life</id><content type="html" xml:base="http://localhost:4000/anime/anime-review/2016/09/08/anime-review-no-game-no-life.html">&lt;p&gt;Konnichiwa minna! Today i would like to share another good anime i have watched :D 
+This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://tensaiscorner.com/assets/blog-images/anime/No_game_no_life.jpg&quot; alt=&quot;NoGameNoLife_Poster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Story - 9/10&lt;/p&gt;
+
+&lt;p&gt;First let me briefly give a short summary of how the story goes. it starts of with 2 NEET siblings, Sora and Shiro in Tokyo and there were being summoned into a fantasy world by a some boy named Tet. What is interesting about this fantasy world is that everything is decided entirely by games.&lt;/p&gt;
+
+&lt;p&gt;These two siblings then uses their intelligence and strategy in games to survive and exploit this fantasy world. Day by day they create new goals to achieve and finally to ultimate goal of challenging Tet. Through this journey, they eventually find out more about this fantasy world and create new allies along the way.&lt;/p&gt;
+
+&lt;p&gt;Music  8/10&lt;/p&gt;
+
+&lt;p&gt;Opening Song
+&lt;strong&gt;[Embed Video pending]&lt;/strong&gt;
+The Opening has really motivating and fast tone and some hint of mystery, which somehow describes the feel of the anime. The lyrics is also quite meaningful as it tells the story of the two siblings, Sora and Shiro&lt;/p&gt;
+
+&lt;p&gt;Ending Song
+&lt;strong&gt;[Embed Video pending]&lt;/strong&gt;
+The song has really soft and relaxing tone to it, but when combined with lyrics it gives a feel of a bittersweet childhood.&lt;/p&gt;
+
+&lt;p&gt;OSTs
+The soundtracks of the anime i would say it is quite fitting with most of the scenes. Sometimes it gives a relaxing game feel, and at more important moments, it has a sort of mysterious feel and also sometimes motivating.&lt;/p&gt;
+
+&lt;p&gt;Art - 8/10
+Art wise i would also it is quite good. It uses a very colourful amount of colours especially colours used in fantasy games.&lt;/p&gt;
+
+&lt;p&gt;Landscape Design
+The town has a really interesting design of having that vibe of an old town, the brick and stone design but yet quite colourful. It has also feel of peaceful small town.&lt;/p&gt;
+
+&lt;p&gt;Character Design&lt;/p&gt;
+
+&lt;p&gt;Overall i would say the characters are quite detailed compared to other anime(s) out there, but still i would not comment much on this because my art suck to be honest.&lt;/p&gt;
+
+&lt;div&gt;&lt;div id=&quot;gallery&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var slideIndex = 1;
+    var slideInterval = 3;
+    var currentSlideInterval = slideInterval;
+    
+    onStart();
+    
+    function onStart() {
+        showDivs(slideIndex);
+        intervalChange();
+    }
+    
+    function intervalChange() {
+        currentSlideInterval--;
+        if(currentSlideInterval == 0) {
+            plusDivs(1);
+            currentSlideInterval = slideInterval;
+        }
+        
+        setTimeout(intervalChange, 1000);
+    }
+    
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+        currentSlideInterval = slideInterval;
+    }
+    
+    function showDivs(n) {
+        //! Reference HTML Template
+        //&lt;div id=”gallery”&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_1.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_2.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_3.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_4.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_sora.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_shiro.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_steph.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_chlammy.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_Jibril.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_izuna.png&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_tet.png&quot;&gt;
+        //    &lt;button onclick=&quot;plusDivs(-1)&quot;&gt;❮&lt;/button&gt;
+        //    &lt;button onclick=&quot;plusDivs(1)&quot;&gt;❯&lt;/button&gt;
+        //&lt;/div&gt;
+
+        document.getElementById(&quot;gallery&quot;).innerHTML = &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_1.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_2.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_3.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_4.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_sora.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_shiro.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_steph.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_chlammy.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_Jibril.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_izuna.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://tensaiscorner.com/assets/blog-images/anime/ngnl_tet.png&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        
+        var btnLeft = document.createElement(&quot;BUTTON&quot;);
+        btnLeft.innerHTML = &quot;&lt;&quot;;
+        btnLeft.setAttribute(&quot;onclick&quot;, &quot;plusDivs(-1)&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(btnLeft);
+        
+        var btnRight = document.createElement(&quot;BUTTON&quot;);
+        btnRight.innerHTML = &quot;&gt;&quot;;
+        btnRight.setAttribute(&quot;onclick&quot;, &quot;plusDivs(1)&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(btnRight);
+        
+        var i;
+        var x = document.getElementsByClassName(&quot;mySlides&quot;);
+        if (n &gt; x.length)
+            slideIndex = 1;
+        
+        if (n &lt; 1)
+            slideIndex = x.length
+        
+        for (i = 0; i &lt; x.length; i++) {
+            x[i].style.display = &quot;none&quot;;
+        }
+        x[slideIndex-1].style.display = &quot;block&quot;;
+    }
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;In conclusion, i would really comment this anime as it has a lot of fun and adventure with strategies and tricks along the way.&lt;/p&gt;</content><author><name></name></author><category term="anime" /><category term="anime-review" /><summary type="html">Konnichiwa minna! Today i would like to share another good anime i have watched :D This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.</summary></entry><entry><title type="html">Anime Review! - Re:Zero kara Hajimeru Isekai Seikatsu</title><link href="http://localhost:4000/anime/anime-review/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu.html" rel="alternate" type="text/html" title="Anime Review! - Re:Zero kara Hajimeru Isekai Seikatsu" /><published>2016-07-19T19:28:00+08:00</published><updated>2016-07-19T19:28:00+08:00</updated><id>http://localhost:4000/anime/anime-review/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu</id><content type="html" xml:base="http://localhost:4000/anime/anime-review/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu.html">&lt;p&gt;Warning! Minor Spoilers&lt;/p&gt;
+
+&lt;p&gt;This review is made based on Episode 1-15&lt;/p&gt;
+
+&lt;p&gt;こんにちは、皆さん！Konnichiwa minna-san!&lt;/p&gt;
+
+&lt;p&gt;So as for today i am going to write a review on this anime most commonly known as Re: Zero.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://tensaiscorner.com/assets/blog-images/anime/re_zero.jpg&quot; alt=&quot;Re-Zero_Poster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A friend of mine asked me to give a review on this anime, so i decided to make this my first blog post.&lt;/p&gt;
+
+&lt;p&gt;So First, my first impressions, the main character, Subaru gets transported into a fantasy world…hmm…sound interesting…..&lt;/p&gt;
+
+&lt;p&gt;Another Konosuba story?&lt;/p&gt;
+
+&lt;p&gt;Well the story starts with him tryinig to find out who summon him into that world, which is also pretty normal for a person who is placed a new world.&lt;/p&gt;
+
+&lt;p&gt;But, he real thing actually starts from Episode 1B, where everything just goes wrong. As the one of the tags of this anime says, psychological horror, it really is. Subaru just gets killed several times by all sorts of torturing methods….wait, now you may be wondering now, died several times? Let me explain, Subaru has a Return by Death ability which enables to travel back into a certain timeline. It sounds like an anime with a MC with a powerful magic power….no, it’s not.&lt;/p&gt;
+
+&lt;p&gt;How he actually dies again and again in torturing methods, brings him into an unstable mental state and………….oh,but that’s not what the anime is all about. Through the timelines, he made many bonds with people that is important to him. Without a purpose in this world, Subaru chooses to protect the people that are dear to him and live happily ever after? Of course not. The writer makes Subaru face many challenges and trials while also being weak and incapable of doing anything useful in this world, which he fails to protect the one dear to him again and again and finally gets through after facing many trials and breakdowns, and the process repeats again on a new arc and timeline.&lt;/p&gt;
+
+&lt;p&gt;On character development, it actually shows how Subaru gains the trust with Rem(which initially did not trust him at all) to something more than just a friendship. On the other hand, it also shows how Subaru and Emilia fails to understand each other creating conflicts between them, and also showing how the bonds around him affects his actions in repeated timelines.&lt;/p&gt;
+
+&lt;p&gt;This anime actually tells us to appreciate the people that are dear to us and also explains the meaning of unconditional love (Later episodes). Overall this anime may hurt your brain by a little LOT, but the deep meaning of the story is worth to watch for.&lt;/p&gt;</content><author><name></name></author><category term="anime" /><category term="anime-review" /><summary type="html">Warning! Minor Spoilers</summary></entry></feed>
