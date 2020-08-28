@@ -16,7 +16,7 @@ This system composed of two scripts the Narrative Database Script and the Narrat
 Narrative Database Script:  
 Overview of the script
 
-```C#
+```csharp
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,7 +59,7 @@ public class NarrativeDatabaseScript : MonoBehaviour
 
 This script stores all the data required for the Narrative. First, there is a <Dialogue> class that stores the required data for each dialogue.
 
-```C#
+```csharp
 [System.Serializable]
 public class Dialogue
 {
@@ -75,7 +75,7 @@ It stores the name of the character that is speaking, ID that identifies that ch
 
 Next, there is a <NarrativeDatabase> class that stores the data required for each conversation.
 
-```C#
+```csharp
 [System.Serializable]
 public class NarrativeDatabase
 {
@@ -90,14 +90,14 @@ It includes the name of the conversation, the ID number of the conversation, the
 
 Last but not least, there is a list of <NarrativeDatabase> to store multiple conversations
 
-```C#
+```csharp
 public List<NarrativeDatabase> NarrativeDatabaseList;
 ```
 
 Narrative Control Script:  
 Overview of the script
 
-```C#
+```csharp
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -235,7 +235,7 @@ public class NarrativeControlScript : MonoBehaviour
 
 Firstly, let’s look into function called Load Conversation( ), this function handles the extraction of data from Narrative Database Script to a temporary list to handle the current conversation.
 
-```C#
+```csharp
 public void LoadConversation (int IdNumber)
     {
         toDeactivate = null;
@@ -266,7 +266,7 @@ public void LoadConversation (int IdNumber)
 
 On Update, the next dialogue can be triggered by click, or when the duration for that dialogue is up.
 
-```C#
+```csharp
 void Update ()
 {
     if(speechBubble.gameObject.activeSelf)
