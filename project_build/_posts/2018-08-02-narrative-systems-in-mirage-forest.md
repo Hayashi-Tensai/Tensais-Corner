@@ -47,10 +47,10 @@ public class NarrativeDatabaseScript : MonoBehaviour
 
     void Awake()
     {
-            if(Instance!= null && Instance != this)
-                    Destroy(gameObject);
-            else
-                    Instance = this;
+        if(Instance!= null && Instance != this)
+                Destroy(gameObject);
+        else
+                Instance = this;
     }
 
     public List<NarrativeDatabase> NarrativeDatabaseList;
@@ -237,31 +237,31 @@ Firstly, let’s look into function called Load Conversation( ), this function h
 
 ```csharp
 public void LoadConversation (int IdNumber)
+{
+    toDeactivate = null;
+    speechBubble.gameObject.SetActive(true);
+    picture.gameObject.SetActive(true);
+    //isCompleted_L = false;
+
+    List<NarrativeDatabase> tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+
+    FindCharacters ();
+    characterList[0].GetComponent<CharacterControlScript>().enabled = false;
+    characterList[0].transform.GetChild(1).GetComponent<Animator>().SetBool("Walk", false);
+
+    for (int i = 0; i < tempList.Count; i++)
     {
-        toDeactivate = null;
-        speechBubble.gameObject.SetActive(true);
-        picture.gameObject.SetActive(true);
-        //isCompleted_L = false;
-
-        List<NarrativeDatabase> tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
-
-        FindCharacters ();
-        characterList[0].GetComponent<CharacterControlScript>().enabled = false;
-        characterList[0].transform.GetChild(1).GetComponent<Animator>().SetBool("Walk", false);
-
-        for (int i = 0; i < tempList.Count; i++)
+        if(tempList[i].IdNumber == IdNumber)
         {
-            if(tempList[i].IdNumber == IdNumber)
-            {
-                tempDialogueList = tempList[i].DialogueList;
-                break;
-            }
+            tempDialogueList = tempList[i].DialogueList;
+            break;
         }
-
-        pageNumber = -1;
-        timeElasped = 0;
-        NextPage ();
     }
+
+    pageNumber = -1;
+    timeElasped = 0;
+    NextPage ();
+}
 ```
 
 On Update, the next dialogue can be triggered by click, or when the duration for that dialogue is up.

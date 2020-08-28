@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-02T10:46:00+08:00" />
 <script type="application/ld+json">
-{"headline":"Mirage Forest - Narrative Systems","dateModified":"2018-08-02T10:46:00+08:00","datePublished":"2018-08-02T10:46:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest"},"description":"Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs","url":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest"},"headline":"Mirage Forest - Narrative Systems","description":"Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs","datePublished":"2018-08-02T10:46:00+08:00","dateModified":"2018-08-02T10:46:00+08:00","@type":"BlogPosting","url":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /></head>
 <body><header class="site-header" role="banner">
@@ -55,269 +55,269 @@
 <p>Narrative Database Script:<br />
 Overview of the script</p>
 
-<pre><code class="language-C#">using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
 
-[System.Serializable]
-public class Dialogue
-{
-    public string name;
-    public int chracterID;
-    public string speech;
-    public float duration;
-    public float wantedAngle;
-    public CharacterAnimation characterAnimation;
-}
+<span class="p">[</span><span class="n">System</span><span class="p">.</span><span class="n">Serializable</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Dialogue</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">chracterID</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">speech</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">duration</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">wantedAngle</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">CharacterAnimation</span> <span class="n">characterAnimation</span><span class="p">;</span>
+<span class="p">}</span>
 
-[System.Serializable]
-public class NarrativeDatabase
-{
-    public string name;
-    public int IdNumber;
-    public string Description; //HT For refrence usage only
-    public List&lt;Dialogue&gt; DialogueList;
-}
+<span class="p">[</span><span class="n">System</span><span class="p">.</span><span class="n">Serializable</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NarrativeDatabase</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">IdNumber</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Description</span><span class="p">;</span> <span class="c1">//HT For refrence usage only</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Dialogue</span><span class="p">&gt;</span> <span class="n">DialogueList</span><span class="p">;</span>
+<span class="p">}</span>
 
-public class NarrativeDatabaseScript : MonoBehaviour
-{
-    public static NarrativeDatabaseScript Instance {get; set;}
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NarrativeDatabaseScript</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">NarrativeDatabaseScript</span> <span class="n">Instance</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;}</span>
 
-    void Awake()
-    {
-            if(Instance!= null &amp;&amp; Instance != this)
-                    Destroy(gameObject);
-            else
-                    Instance = this;
-    }
+    <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">Instance</span><span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">Instance</span> <span class="p">!=</span> <span class="k">this</span><span class="p">)</span>
+                <span class="nf">Destroy</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
+        <span class="k">else</span>
+                <span class="n">Instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public List&lt;NarrativeDatabase&gt; NarrativeDatabaseList;
-}
-</code></pre>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">NarrativeDatabase</span><span class="p">&gt;</span> <span class="n">NarrativeDatabaseList</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>This script stores all the data required for the Narrative. First, there is a <Dialogue> class that stores the required data for each dialogue.</Dialogue></p>
 
-<pre><code class="language-C#">[System.Serializable]
-public class Dialogue
-{
-    public string name;
-    public int chracterID;
-    public string speech;
-    public float duration;
-    public float wantedAngle;
-    public CharacterAnimation characterAnimation;
-}
-</code></pre>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">System</span><span class="p">.</span><span class="n">Serializable</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Dialogue</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">chracterID</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">speech</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">duration</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">wantedAngle</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">CharacterAnimation</span> <span class="n">characterAnimation</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 <p>It stores the name of the character that is speaking, ID that identifies that character, the content of the speech, duration on how long the dialogue should be, the angle of the camera and as well the animation played.</p>
 
 <p>Next, there is a <NarrativeDatabase> class that stores the data required for each conversation.</NarrativeDatabase></p>
 
-<pre><code class="language-C#">[System.Serializable]
-public class NarrativeDatabase
-{
-    public string name;
-    public int IdNumber;
-    public string Description; //HT For refrence usage only
-    public List&lt;Dialogue&gt; DialogueList;
-}
-</code></pre>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">System</span><span class="p">.</span><span class="n">Serializable</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NarrativeDatabase</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">IdNumber</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Description</span><span class="p">;</span> <span class="c1">//HT For refrence usage only</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Dialogue</span><span class="p">&gt;</span> <span class="n">DialogueList</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>It includes the name of the conversation, the ID number of the conversation, the description of the conversation for internal uses and as well a list of <Dialougue> that forms the whole conversation.</Dialougue></p>
 
 <p>Last but not least, there is a list of <NarrativeDatabase> to store multiple conversations</NarrativeDatabase></p>
 
-<pre><code class="language-C#">public List&lt;NarrativeDatabase&gt; NarrativeDatabaseList;
-</code></pre>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">NarrativeDatabase</span><span class="p">&gt;</span> <span class="n">NarrativeDatabaseList</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Narrative Control Script:<br />
 Overview of the script</p>
 
-<pre><code class="language-C#">using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine.UI</span><span class="p">;</span>
 
-public class NarrativeControlScript : MonoBehaviour
-{
-    List &lt;GameObject&gt; characterList;
-    int pageNumber;
-    int currentCharacterIndex;
-    public Image speechBubble;
-    public Image picture;
-    List&lt;Dialogue&gt; tempDialogueList;
-    public List&lt;Sprite&gt; pictureList;
-    float timeElasped;
-    GameObject toDeactivate; //! GameObjects to Reactivate after deactivated
-    public bool isCompleted_L; //! Turns to true when a set of dialougue is completed
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NarrativeControlScript</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="n">List</span> <span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;</span> <span class="n">characterList</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">pageNumber</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">currentCharacterIndex</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">Image</span> <span class="n">speechBubble</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">Image</span> <span class="n">picture</span><span class="p">;</span>
+    <span class="n">List</span><span class="p">&lt;</span><span class="n">Dialogue</span><span class="p">&gt;</span> <span class="n">tempDialogueList</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Sprite</span><span class="p">&gt;</span> <span class="n">pictureList</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">timeElasped</span><span class="p">;</span>
+    <span class="n">GameObject</span> <span class="n">toDeactivate</span><span class="p">;</span> <span class="c1">//! GameObjects to Reactivate after deactivated</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">isCompleted_L</span><span class="p">;</span> <span class="c1">//! Turns to true when a set of dialougue is completed</span>
 
-    public static NarrativeControlScript Instance {get; set;}
+    <span class="k">public</span> <span class="k">static</span> <span class="n">NarrativeControlScript</span> <span class="n">Instance</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;}</span>
 
-    void Awake()
-    {
-        if(Instance!= null &amp;&amp; Instance != this)
-                Destroy(gameObject);
-        else
-                Instance = this;
-    }
+    <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">Instance</span><span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">Instance</span> <span class="p">!=</span> <span class="k">this</span><span class="p">)</span>
+                <span class="nf">Destroy</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
+        <span class="k">else</span>
+                <span class="n">Instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    void Start ()
-    {
-        tempDialogueList = new List&lt;Dialogue&gt;();
-    }
+    <span class="k">void</span> <span class="nf">Start</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">tempDialogueList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Dialogue</span><span class="p">&gt;();</span>
+    <span class="p">}</span>
 
-    void Update ()
-    {
-        if(speechBubble.gameObject.activeSelf)
-        {
-            if(Input.GetMouseButtonDown(0))
-            {
-                timeElasped = 0;
-                NextPage ();
-            }
+    <span class="k">void</span> <span class="nf">Update</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">speechBubble</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">activeSelf</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="nf">GetMouseButtonDown</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                <span class="nf">NextPage</span> <span class="p">();</span>
+            <span class="p">}</span>
 
-            if(timeElasped &gt; tempDialogueList[pageNumber].duration)
-            {
-                timeElasped = 0;
-                NextPage ();
-            }
-            timeElasped += Time.deltaTime;
-        }
-    }
+            <span class="k">if</span><span class="p">(</span><span class="n">timeElasped</span> <span class="p">&gt;</span> <span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">duration</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                <span class="nf">NextPage</span> <span class="p">();</span>
+            <span class="p">}</span>
+            <span class="n">timeElasped</span> <span class="p">+=</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    void FindCharacters ()
-    {
-        characterList = new List&lt;GameObject&gt;();
-        characterList.AddRange(GameObject.FindGameObjectsWithTag("Player"));
-        characterList.AddRange(GameObject.FindGameObjectsWithTag("Characters"));
-    }
+    <span class="k">void</span> <span class="nf">FindCharacters</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">characterList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;();</span>
+        <span class="n">characterList</span><span class="p">.</span><span class="nf">AddRange</span><span class="p">(</span><span class="n">GameObject</span><span class="p">.</span><span class="nf">FindGameObjectsWithTag</span><span class="p">(</span><span class="s">"Player"</span><span class="p">));</span>
+        <span class="n">characterList</span><span class="p">.</span><span class="nf">AddRange</span><span class="p">(</span><span class="n">GameObject</span><span class="p">.</span><span class="nf">FindGameObjectsWithTag</span><span class="p">(</span><span class="s">"Characters"</span><span class="p">));</span>
+    <span class="p">}</span>
 
 
-    public void LoadConversation (int IdNumber)
-    {
-        toDeactivate = null;
-        speechBubble.gameObject.SetActive(true);
-        picture.gameObject.SetActive(true);
-        //isCompleted_L = false;
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">LoadConversation</span> <span class="p">(</span><span class="kt">int</span> <span class="n">IdNumber</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">toDeactivate</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="n">speechBubble</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+        <span class="n">picture</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+        <span class="c1">//isCompleted_L = false;</span>
 
-        List&lt;NarrativeDatabase&gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+        <span class="n">List</span><span class="p">&lt;</span><span class="n">NarrativeDatabase</span><span class="p">&gt;</span> <span class="n">tempList</span> <span class="p">=</span> <span class="n">NarrativeDatabaseScript</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">NarrativeDatabaseList</span><span class="p">;</span>
 
-        FindCharacters ();
-        characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = false;
-        characterList[0].transform.GetChild(1).GetComponent&lt;Animator&gt;().SetBool("Walk", false);
+        <span class="nf">FindCharacters</span> <span class="p">();</span>
+        <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterControlScript</span><span class="p">&gt;().</span><span class="n">enabled</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">1</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Animator</span><span class="p">&gt;().</span><span class="nf">SetBool</span><span class="p">(</span><span class="s">"Walk"</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 
-        for (int i = 0; i &lt; tempList.Count; i++)
-        {
-            if(tempList[i].IdNumber == IdNumber)
-            {
-                tempDialogueList = tempList[i].DialogueList;
-                break;
-            }
-        }
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">tempList</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">tempList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">IdNumber</span> <span class="p">==</span> <span class="n">IdNumber</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">tempDialogueList</span> <span class="p">=</span> <span class="n">tempList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">DialogueList</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        pageNumber = -1;
-        timeElasped = 0;
-        NextPage ();
-    }
+        <span class="n">pageNumber</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+        <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="nf">NextPage</span> <span class="p">();</span>
+    <span class="p">}</span>
 
-    public void LoadConversation (int IdNumber, GameObject toDeactivate)
-    {
-        LoadConversation (IdNumber);
-        this.toDeactivate = toDeactivate;
-    }
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">LoadConversation</span> <span class="p">(</span><span class="kt">int</span> <span class="n">IdNumber</span><span class="p">,</span> <span class="n">GameObject</span> <span class="n">toDeactivate</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">LoadConversation</span> <span class="p">(</span><span class="n">IdNumber</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">toDeactivate</span> <span class="p">=</span> <span class="n">toDeactivate</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public void NextPage ()
-    {
-        if (pageNumber &lt; tempDialogueList.Count - 1)
-        {
-            pageNumber ++;
-            speechBubble.transform.GetChild(0).GetComponent&lt;Text&gt;().text
-            = tempDialogueList[pageNumber].speech;
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">NextPage</span> <span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">pageNumber</span> <span class="p">&lt;</span> <span class="n">tempDialogueList</span><span class="p">.</span><span class="n">Count</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">pageNumber</span> <span class="p">++;</span>
+            <span class="n">speechBubble</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Text</span><span class="p">&gt;().</span><span class="n">text</span>
+            <span class="p">=</span> <span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">speech</span><span class="p">;</span>
 
-            speechBubble.transform.GetChild(1).GetChild(0).GetComponent&lt;Text&gt;().text
-            = tempDialogueList[pageNumber].name;
+            <span class="n">speechBubble</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">1</span><span class="p">).</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Text</span><span class="p">&gt;().</span><span class="n">text</span>
+            <span class="p">=</span> <span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">name</span><span class="p">;</span>
 
-            for (int i = 0; i &lt; characterList.Count; i++)
-            {
-                if(characterList[i].GetComponent&lt;CharacterIDTagScript&gt;().ID == tempDialogueList[pageNumber].chracterID)
-                {
-                        currentCharacterIndex = i;
-                        break;
-                }
-            }
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">characterList</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">characterList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterIDTagScript</span><span class="p">&gt;().</span><span class="n">ID</span> <span class="p">==</span> <span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">chracterID</span><span class="p">)</span>
+                <span class="p">{</span>
+                        <span class="n">currentCharacterIndex</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
 
-            picture.sprite = pictureList[tempDialogueList[pageNumber].chracterID - 1];
+            <span class="n">picture</span><span class="p">.</span><span class="n">sprite</span> <span class="p">=</span> <span class="n">pictureList</span><span class="p">[</span><span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">chracterID</span> <span class="p">-</span> <span class="m">1</span><span class="p">];</span>
 
-            //speechBubble.transform.position = Camera.main.WorldToScreenPoint(characterList[currentCharacterIndex].transform.GetChild(0).position);
-            characterList[0].GetComponent&lt;CharacterControlScript&gt; ().RotateCamera(tempDialogueList[pageNumber].wantedAngle);
-            characterList[currentCharacterIndex].
-            GetComponent&lt;CharacterAnimationScript&gt; ().ChangeAnimation(tempDialogueList[pageNumber].characterAnimation);
-        }
-        else
-        {
-            characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = true;
-            speechBubble.gameObject.SetActive(false);
-            picture.gameObject.SetActive(false);
-            isCompleted_L = true;
-            if(toDeactivate != null)
-            {
-                    toDeactivate.SetActive(false);
-            }
-        }
-    }
-}
-</code></pre>
+            <span class="c1">//speechBubble.transform.position = Camera.main.WorldToScreenPoint(characterList[currentCharacterIndex].transform.GetChild(0).position);</span>
+            <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterControlScript</span><span class="p">&gt;</span> <span class="p">().</span><span class="nf">RotateCamera</span><span class="p">(</span><span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">wantedAngle</span><span class="p">);</span>
+            <span class="n">characterList</span><span class="p">[</span><span class="n">currentCharacterIndex</span><span class="p">].</span>
+            <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterAnimationScript</span><span class="p">&gt;</span> <span class="p">().</span><span class="nf">ChangeAnimation</span><span class="p">(</span><span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">characterAnimation</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterControlScript</span><span class="p">&gt;().</span><span class="n">enabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">speechBubble</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+            <span class="n">picture</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+            <span class="n">isCompleted_L</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">toDeactivate</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                    <span class="n">toDeactivate</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Firstly, let’s look into function called Load Conversation( ), this function handles the extraction of data from Narrative Database Script to a temporary list to handle the current conversation.</p>
 
-<pre><code class="language-C#">public void LoadConversation (int IdNumber)
-    {
-        toDeactivate = null;
-        speechBubble.gameObject.SetActive(true);
-        picture.gameObject.SetActive(true);
-        //isCompleted_L = false;
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">void</span> <span class="nf">LoadConversation</span> <span class="p">(</span><span class="kt">int</span> <span class="n">IdNumber</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">toDeactivate</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="n">speechBubble</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+    <span class="n">picture</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="nf">SetActive</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+    <span class="c1">//isCompleted_L = false;</span>
 
-        List&lt;NarrativeDatabase&gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+    <span class="n">List</span><span class="p">&lt;</span><span class="n">NarrativeDatabase</span><span class="p">&gt;</span> <span class="n">tempList</span> <span class="p">=</span> <span class="n">NarrativeDatabaseScript</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">NarrativeDatabaseList</span><span class="p">;</span>
 
-        FindCharacters ();
-        characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = false;
-        characterList[0].transform.GetChild(1).GetComponent&lt;Animator&gt;().SetBool("Walk", false);
+    <span class="nf">FindCharacters</span> <span class="p">();</span>
+    <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CharacterControlScript</span><span class="p">&gt;().</span><span class="n">enabled</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="n">characterList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">1</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Animator</span><span class="p">&gt;().</span><span class="nf">SetBool</span><span class="p">(</span><span class="s">"Walk"</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 
-        for (int i = 0; i &lt; tempList.Count; i++)
-        {
-            if(tempList[i].IdNumber == IdNumber)
-            {
-                tempDialogueList = tempList[i].DialogueList;
-                break;
-            }
-        }
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">tempList</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">tempList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">IdNumber</span> <span class="p">==</span> <span class="n">IdNumber</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">tempDialogueList</span> <span class="p">=</span> <span class="n">tempList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">DialogueList</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-        pageNumber = -1;
-        timeElasped = 0;
-        NextPage ();
-    }
-</code></pre>
+    <span class="n">pageNumber</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+    <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nf">NextPage</span> <span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>On Update, the next dialogue can be triggered by click, or when the duration for that dialogue is up.</p>
 
-<pre><code class="language-C#">void Update ()
-{
-    if(speechBubble.gameObject.activeSelf)
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            timeElasped = 0;
-            NextPage ();
-        }
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Update</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">speechBubble</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">activeSelf</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="nf">GetMouseButtonDown</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="nf">NextPage</span> <span class="p">();</span>
+        <span class="p">}</span>
 
-        if(timeElasped &gt; tempDialogueList[pageNumber].duration)
-        {
-            timeElasped = 0;
-            NextPage ();
-        }
-        timeElasped += Time.deltaTime;
-    }
-}
-</code></pre>
+        <span class="k">if</span><span class="p">(</span><span class="n">timeElasped</span> <span class="p">&gt;</span> <span class="n">tempDialogueList</span><span class="p">[</span><span class="n">pageNumber</span><span class="p">].</span><span class="n">duration</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">timeElasped</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="nf">NextPage</span> <span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">timeElasped</span> <span class="p">+=</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
   </div><a class="u-url" href="/blog/2018/08/02/narrative-systems-in-mirage-forest" hidden></a>
 </article>
