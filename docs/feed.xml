@@ -1,17 +1,287 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-27T13:42:13+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle></subtitle><entry><title type="html">Anime Review! - No Game No Life</title><link href="http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life" rel="alternate" type="text/html" title="Anime Review! - No Game No Life" /><published>2016-09-08T11:23:00+08:00</published><updated>2016-09-08T11:23:00+08:00</updated><id>http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life</id><content type="html" xml:base="http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life">&lt;p&gt;Konnichiwa minna! Today i would like to share another good anime i have watched :D 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-28T11:07:12+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle></subtitle><entry><title type="html">Mirage Forest - Narrative Systems</title><link href="http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest" rel="alternate" type="text/html" title="Mirage Forest - Narrative Systems" /><published>2018-08-02T10:46:00+08:00</published><updated>2018-08-02T10:46:00+08:00</updated><id>http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest</id><content type="html" xml:base="http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest">&lt;p&gt;Full script can be viewed at:&lt;br /&gt;
+&lt;a href=&quot;https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs&quot;&gt;https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Global%20Controllers/NarrativeControlScript.cs&quot;&gt;https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Global%20Controllers/NarrativeControlScript.cs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This system composed of two scripts the Narrative Database Script and the Narrative Control Script.&lt;/p&gt;
+
+&lt;p&gt;Narrative Database Script:&lt;br /&gt;
+Overview of the script&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class Dialogue
+{
+    public string name;
+    public int chracterID;
+    public string speech;
+    public float duration;
+    public float wantedAngle;
+    public CharacterAnimation characterAnimation;
+}
+
+[System.Serializable]
+public class NarrativeDatabase
+{
+    public string name;
+    public int IdNumber;
+    public string Description; //HT For refrence usage only
+    public List&amp;lt;Dialogue&amp;gt; DialogueList;
+}
+
+public class NarrativeDatabaseScript : MonoBehaviour
+{
+    public static NarrativeDatabaseScript Instance {get; set;}
+
+    void Awake()
+    {
+            if(Instance!= null &amp;amp;&amp;amp; Instance != this)
+                    Destroy(gameObject);
+            else
+                    Instance = this;
+    }
+
+    public List&amp;lt;NarrativeDatabase&amp;gt; NarrativeDatabaseList;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This script stores all the data required for the Narrative. First, there is a &lt;Dialogue&gt; class that stores the required data for each dialogue.&lt;/Dialogue&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;[System.Serializable]
+public class Dialogue
+{
+    public string name;
+    public int chracterID;
+    public string speech;
+    public float duration;
+    public float wantedAngle;
+    public CharacterAnimation characterAnimation;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It stores the name of the character that is speaking, ID that identifies that character, the content of the speech, duration on how long the dialogue should be, the angle of the camera and as well the animation played.&lt;/p&gt;
+
+&lt;p&gt;Next, there is a &lt;NarrativeDatabase&gt; class that stores the data required for each conversation.&lt;/NarrativeDatabase&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;[System.Serializable]
+public class NarrativeDatabase
+{
+    public string name;
+    public int IdNumber;
+    public string Description; //HT For refrence usage only
+    public List&amp;lt;Dialogue&amp;gt; DialogueList;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It includes the name of the conversation, the ID number of the conversation, the description of the conversation for internal uses and as well a list of &lt;Dialougue&gt; that forms the whole conversation.&lt;/Dialougue&gt;&lt;/p&gt;
+
+&lt;p&gt;Last but not least, there is a list of &lt;NarrativeDatabase&gt; to store multiple conversations&lt;/NarrativeDatabase&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;public List&amp;lt;NarrativeDatabase&amp;gt; NarrativeDatabaseList;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Narrative Control Script:&lt;br /&gt;
+Overview of the script&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class NarrativeControlScript : MonoBehaviour
+{
+    List &amp;lt;GameObject&amp;gt; characterList;
+    int pageNumber;
+    int currentCharacterIndex;
+    public Image speechBubble;
+    public Image picture;
+    List&amp;lt;Dialogue&amp;gt; tempDialogueList;
+    public List&amp;lt;Sprite&amp;gt; pictureList;
+    float timeElasped;
+    GameObject toDeactivate; //! GameObjects to Reactivate after deactivated
+    public bool isCompleted_L; //! Turns to true when a set of dialougue is completed
+
+    public static NarrativeControlScript Instance {get; set;}
+
+    void Awake()
+    {
+        if(Instance!= null &amp;amp;&amp;amp; Instance != this)
+                Destroy(gameObject);
+        else
+                Instance = this;
+    }
+
+    void Start ()
+    {
+        tempDialogueList = new List&amp;lt;Dialogue&amp;gt;();
+    }
+
+    void Update ()
+    {
+        if(speechBubble.gameObject.activeSelf)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                timeElasped = 0;
+                NextPage ();
+            }
+
+            if(timeElasped &amp;gt; tempDialogueList[pageNumber].duration)
+            {
+                timeElasped = 0;
+                NextPage ();
+            }
+            timeElasped += Time.deltaTime;
+        }
+    }
+
+    void FindCharacters ()
+    {
+        characterList = new List&amp;lt;GameObject&amp;gt;();
+        characterList.AddRange(GameObject.FindGameObjectsWithTag(&quot;Player&quot;));
+        characterList.AddRange(GameObject.FindGameObjectsWithTag(&quot;Characters&quot;));
+    }
+
+
+    public void LoadConversation (int IdNumber)
+    {
+        toDeactivate = null;
+        speechBubble.gameObject.SetActive(true);
+        picture.gameObject.SetActive(true);
+        //isCompleted_L = false;
+
+        List&amp;lt;NarrativeDatabase&amp;gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+
+        FindCharacters ();
+        characterList[0].GetComponent&amp;lt;CharacterControlScript&amp;gt;().enabled = false;
+        characterList[0].transform.GetChild(1).GetComponent&amp;lt;Animator&amp;gt;().SetBool(&quot;Walk&quot;, false);
+
+        for (int i = 0; i &amp;lt; tempList.Count; i++)
+        {
+            if(tempList[i].IdNumber == IdNumber)
+            {
+                tempDialogueList = tempList[i].DialogueList;
+                break;
+            }
+        }
+
+        pageNumber = -1;
+        timeElasped = 0;
+        NextPage ();
+    }
+
+    public void LoadConversation (int IdNumber, GameObject toDeactivate)
+    {
+        LoadConversation (IdNumber);
+        this.toDeactivate = toDeactivate;
+    }
+
+    public void NextPage ()
+    {
+        if (pageNumber &amp;lt; tempDialogueList.Count - 1)
+        {
+            pageNumber ++;
+            speechBubble.transform.GetChild(0).GetComponent&amp;lt;Text&amp;gt;().text
+            = tempDialogueList[pageNumber].speech;
+
+            speechBubble.transform.GetChild(1).GetChild(0).GetComponent&amp;lt;Text&amp;gt;().text
+            = tempDialogueList[pageNumber].name;
+
+            for (int i = 0; i &amp;lt; characterList.Count; i++)
+            {
+                if(characterList[i].GetComponent&amp;lt;CharacterIDTagScript&amp;gt;().ID == tempDialogueList[pageNumber].chracterID)
+                {
+                        currentCharacterIndex = i;
+                        break;
+                }
+            }
+
+            picture.sprite = pictureList[tempDialogueList[pageNumber].chracterID - 1];
+
+            //speechBubble.transform.position = Camera.main.WorldToScreenPoint(characterList[currentCharacterIndex].transform.GetChild(0).position);
+            characterList[0].GetComponent&amp;lt;CharacterControlScript&amp;gt; ().RotateCamera(tempDialogueList[pageNumber].wantedAngle);
+            characterList[currentCharacterIndex].
+            GetComponent&amp;lt;CharacterAnimationScript&amp;gt; ().ChangeAnimation(tempDialogueList[pageNumber].characterAnimation);
+        }
+        else
+        {
+            characterList[0].GetComponent&amp;lt;CharacterControlScript&amp;gt;().enabled = true;
+            speechBubble.gameObject.SetActive(false);
+            picture.gameObject.SetActive(false);
+            isCompleted_L = true;
+            if(toDeactivate != null)
+            {
+                    toDeactivate.SetActive(false);
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Firstly, let’s look into function called Load Conversation( ), this function handles the extraction of data from Narrative Database Script to a temporary list to handle the current conversation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;public void LoadConversation (int IdNumber)
+    {
+        toDeactivate = null;
+        speechBubble.gameObject.SetActive(true);
+        picture.gameObject.SetActive(true);
+        //isCompleted_L = false;
+
+        List&amp;lt;NarrativeDatabase&amp;gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+
+        FindCharacters ();
+        characterList[0].GetComponent&amp;lt;CharacterControlScript&amp;gt;().enabled = false;
+        characterList[0].transform.GetChild(1).GetComponent&amp;lt;Animator&amp;gt;().SetBool(&quot;Walk&quot;, false);
+
+        for (int i = 0; i &amp;lt; tempList.Count; i++)
+        {
+            if(tempList[i].IdNumber == IdNumber)
+            {
+                tempDialogueList = tempList[i].DialogueList;
+                break;
+            }
+        }
+
+        pageNumber = -1;
+        timeElasped = 0;
+        NextPage ();
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On Update, the next dialogue can be triggered by click, or when the duration for that dialogue is up.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;void Update ()
+{
+    if(speechBubble.gameObject.activeSelf)
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            timeElasped = 0;
+            NextPage ();
+        }
+
+        if(timeElasped &amp;gt; tempDialogueList[pageNumber].duration)
+        {
+            timeElasped = 0;
+            NextPage ();
+        }
+        timeElasped += Time.deltaTime;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="game-development" /><category term="mirage-forest" /><summary type="html">Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs</summary></entry><entry><title type="html">Anime Review! - No Game No Life</title><link href="http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life" rel="alternate" type="text/html" title="Anime Review! - No Game No Life" /><published>2016-09-08T11:23:00+08:00</published><updated>2016-09-08T11:23:00+08:00</updated><id>http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life</id><content type="html" xml:base="http://localhost:4000/blog/2016/09/08/anime-review-no-game-no-life">&lt;p&gt;Konnichiwa minna! Today i would like to share another good anime i have watched :D 
 This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://tensaiscorner.com/assets/blog-images/anime/No_game_no_life.jpg&quot; alt=&quot;NoGameNoLife_Poster&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Story - 9/10&lt;/p&gt;
-
-&lt;p&gt;First let me briefly give a short summary of how the story goes. it starts of with 2 NEET siblings, Sora and Shiro in Tokyo and there were being summoned into a fantasy world by a some boy named Tet. What is interesting about this fantasy world is that everything is decided entirely by games.&lt;/p&gt;
+&lt;p&gt;Story - 9/10&lt;br /&gt;
+First let me briefly give a short summary of how the story goes. it starts of with 2 NEET siblings, Sora and Shiro in Tokyo and there were being summoned into a fantasy world by a some boy named Tet. What is interesting about this fantasy world is that everything is decided entirely by games.&lt;/p&gt;
 
 &lt;p&gt;These two siblings then uses their intelligence and strategy in games to survive and exploit this fantasy world. Day by day they create new goals to achieve and finally to ultimate goal of challenging Tet. Through this journey, they eventually find out more about this fantasy world and create new allies along the way.&lt;/p&gt;
 
-&lt;p&gt;Music  8/10&lt;/p&gt;
-
-&lt;p&gt;Opening Song
+&lt;p&gt;Music  8/10&lt;br /&gt;
+Opening Song
 &lt;strong&gt;[Embed Video pending]&lt;/strong&gt;
 The Opening has really motivating and fast tone and some hint of mystery, which somehow describes the feel of the anime. The lyrics is also quite meaningful as it tells the story of the two siblings, Sora and Shiro&lt;/p&gt;
 
@@ -19,18 +289,17 @@ The Opening has really motivating and fast tone and some hint of mystery, which 
 &lt;strong&gt;[Embed Video pending]&lt;/strong&gt;
 The song has really soft and relaxing tone to it, but when combined with lyrics it gives a feel of a bittersweet childhood.&lt;/p&gt;
 
-&lt;p&gt;OSTs
+&lt;p&gt;OSTs&lt;br /&gt;
 The soundtracks of the anime i would say it is quite fitting with most of the scenes. Sometimes it gives a relaxing game feel, and at more important moments, it has a sort of mysterious feel and also sometimes motivating.&lt;/p&gt;
 
-&lt;p&gt;Art - 8/10
+&lt;p&gt;Art - 8/10&lt;br /&gt;
 Art wise i would also it is quite good. It uses a very colourful amount of colours especially colours used in fantasy games.&lt;/p&gt;
 
-&lt;p&gt;Landscape Design
+&lt;p&gt;Landscape Design&lt;br /&gt;
 The town has a really interesting design of having that vibe of an old town, the brick and stone design but yet quite colourful. It has also feel of peaceful small town.&lt;/p&gt;
 
-&lt;p&gt;Character Design&lt;/p&gt;
-
-&lt;p&gt;Overall i would say the characters are quite detailed compared to other anime(s) out there, but still i would not comment much on this because my art suck to be honest.&lt;/p&gt;
+&lt;p&gt;Character Design&lt;br /&gt;
+Overall i would say the characters are quite detailed compared to other anime(s) out there, but still i would not comment much on this because my art suck to be honest.&lt;/p&gt;
 
 &lt;div&gt;&lt;div id=&quot;gallery&quot;&gt;
 &lt;/div&gt;

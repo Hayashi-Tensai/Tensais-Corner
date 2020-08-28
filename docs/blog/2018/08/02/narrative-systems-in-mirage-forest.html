@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Mirage Forest - Narrative Systems | Tensai’s Corner</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Mirage Forest - Narrative Systems" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs" />
+<meta property="og:description" content="Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs" />
+<link rel="canonical" href="http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest" />
+<meta property="og:url" content="http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest" />
+<meta property="og:site_name" content="Tensai’s Corner" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-02T10:46:00+08:00" />
+<script type="application/ld+json">
+{"headline":"Mirage Forest - Narrative Systems","dateModified":"2018-08-02T10:46:00+08:00","datePublished":"2018-08-02T10:46:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest"},"description":"Full script can be viewed at: https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs","url":"http://localhost:4000/blog/2018/08/02/narrative-systems-in-mirage-forest","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tensai&#39;s Corner</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Mirage Forest - Narrative Systems</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-02T10:46:00+08:00" itemprop="datePublished">Aug 2, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Full script can be viewed at:<br />
+<a href="https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs">https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Databases/NarrativeDatabaseScript.cs</a></p>
+
+<p><a href="https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Global%20Controllers/NarrativeControlScript.cs">https://github.com/kwlim94/Mirage-Forest/blob/master/Mirage%20Forest/Assets/Scripts/Global%20Controllers/NarrativeControlScript.cs</a></p>
+
+<p>This system composed of two scripts the Narrative Database Script and the Narrative Control Script.</p>
+
+<p>Narrative Database Script:<br />
+Overview of the script</p>
+
+<pre><code class="language-C#">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class Dialogue
+{
+    public string name;
+    public int chracterID;
+    public string speech;
+    public float duration;
+    public float wantedAngle;
+    public CharacterAnimation characterAnimation;
+}
+
+[System.Serializable]
+public class NarrativeDatabase
+{
+    public string name;
+    public int IdNumber;
+    public string Description; //HT For refrence usage only
+    public List&lt;Dialogue&gt; DialogueList;
+}
+
+public class NarrativeDatabaseScript : MonoBehaviour
+{
+    public static NarrativeDatabaseScript Instance {get; set;}
+
+    void Awake()
+    {
+            if(Instance!= null &amp;&amp; Instance != this)
+                    Destroy(gameObject);
+            else
+                    Instance = this;
+    }
+
+    public List&lt;NarrativeDatabase&gt; NarrativeDatabaseList;
+}
+</code></pre>
+
+<p>This script stores all the data required for the Narrative. First, there is a <Dialogue> class that stores the required data for each dialogue.</Dialogue></p>
+
+<pre><code class="language-C#">[System.Serializable]
+public class Dialogue
+{
+    public string name;
+    public int chracterID;
+    public string speech;
+    public float duration;
+    public float wantedAngle;
+    public CharacterAnimation characterAnimation;
+}
+</code></pre>
+<p>It stores the name of the character that is speaking, ID that identifies that character, the content of the speech, duration on how long the dialogue should be, the angle of the camera and as well the animation played.</p>
+
+<p>Next, there is a <NarrativeDatabase> class that stores the data required for each conversation.</NarrativeDatabase></p>
+
+<pre><code class="language-C#">[System.Serializable]
+public class NarrativeDatabase
+{
+    public string name;
+    public int IdNumber;
+    public string Description; //HT For refrence usage only
+    public List&lt;Dialogue&gt; DialogueList;
+}
+</code></pre>
+
+<p>It includes the name of the conversation, the ID number of the conversation, the description of the conversation for internal uses and as well a list of <Dialougue> that forms the whole conversation.</Dialougue></p>
+
+<p>Last but not least, there is a list of <NarrativeDatabase> to store multiple conversations</NarrativeDatabase></p>
+
+<pre><code class="language-C#">public List&lt;NarrativeDatabase&gt; NarrativeDatabaseList;
+</code></pre>
+
+<p>Narrative Control Script:<br />
+Overview of the script</p>
+
+<pre><code class="language-C#">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class NarrativeControlScript : MonoBehaviour
+{
+    List &lt;GameObject&gt; characterList;
+    int pageNumber;
+    int currentCharacterIndex;
+    public Image speechBubble;
+    public Image picture;
+    List&lt;Dialogue&gt; tempDialogueList;
+    public List&lt;Sprite&gt; pictureList;
+    float timeElasped;
+    GameObject toDeactivate; //! GameObjects to Reactivate after deactivated
+    public bool isCompleted_L; //! Turns to true when a set of dialougue is completed
+
+    public static NarrativeControlScript Instance {get; set;}
+
+    void Awake()
+    {
+        if(Instance!= null &amp;&amp; Instance != this)
+                Destroy(gameObject);
+        else
+                Instance = this;
+    }
+
+    void Start ()
+    {
+        tempDialogueList = new List&lt;Dialogue&gt;();
+    }
+
+    void Update ()
+    {
+        if(speechBubble.gameObject.activeSelf)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                timeElasped = 0;
+                NextPage ();
+            }
+
+            if(timeElasped &gt; tempDialogueList[pageNumber].duration)
+            {
+                timeElasped = 0;
+                NextPage ();
+            }
+            timeElasped += Time.deltaTime;
+        }
+    }
+
+    void FindCharacters ()
+    {
+        characterList = new List&lt;GameObject&gt;();
+        characterList.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        characterList.AddRange(GameObject.FindGameObjectsWithTag("Characters"));
+    }
+
+
+    public void LoadConversation (int IdNumber)
+    {
+        toDeactivate = null;
+        speechBubble.gameObject.SetActive(true);
+        picture.gameObject.SetActive(true);
+        //isCompleted_L = false;
+
+        List&lt;NarrativeDatabase&gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+
+        FindCharacters ();
+        characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = false;
+        characterList[0].transform.GetChild(1).GetComponent&lt;Animator&gt;().SetBool("Walk", false);
+
+        for (int i = 0; i &lt; tempList.Count; i++)
+        {
+            if(tempList[i].IdNumber == IdNumber)
+            {
+                tempDialogueList = tempList[i].DialogueList;
+                break;
+            }
+        }
+
+        pageNumber = -1;
+        timeElasped = 0;
+        NextPage ();
+    }
+
+    public void LoadConversation (int IdNumber, GameObject toDeactivate)
+    {
+        LoadConversation (IdNumber);
+        this.toDeactivate = toDeactivate;
+    }
+
+    public void NextPage ()
+    {
+        if (pageNumber &lt; tempDialogueList.Count - 1)
+        {
+            pageNumber ++;
+            speechBubble.transform.GetChild(0).GetComponent&lt;Text&gt;().text
+            = tempDialogueList[pageNumber].speech;
+
+            speechBubble.transform.GetChild(1).GetChild(0).GetComponent&lt;Text&gt;().text
+            = tempDialogueList[pageNumber].name;
+
+            for (int i = 0; i &lt; characterList.Count; i++)
+            {
+                if(characterList[i].GetComponent&lt;CharacterIDTagScript&gt;().ID == tempDialogueList[pageNumber].chracterID)
+                {
+                        currentCharacterIndex = i;
+                        break;
+                }
+            }
+
+            picture.sprite = pictureList[tempDialogueList[pageNumber].chracterID - 1];
+
+            //speechBubble.transform.position = Camera.main.WorldToScreenPoint(characterList[currentCharacterIndex].transform.GetChild(0).position);
+            characterList[0].GetComponent&lt;CharacterControlScript&gt; ().RotateCamera(tempDialogueList[pageNumber].wantedAngle);
+            characterList[currentCharacterIndex].
+            GetComponent&lt;CharacterAnimationScript&gt; ().ChangeAnimation(tempDialogueList[pageNumber].characterAnimation);
+        }
+        else
+        {
+            characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = true;
+            speechBubble.gameObject.SetActive(false);
+            picture.gameObject.SetActive(false);
+            isCompleted_L = true;
+            if(toDeactivate != null)
+            {
+                    toDeactivate.SetActive(false);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>Firstly, let’s look into function called Load Conversation( ), this function handles the extraction of data from Narrative Database Script to a temporary list to handle the current conversation.</p>
+
+<pre><code class="language-C#">public void LoadConversation (int IdNumber)
+    {
+        toDeactivate = null;
+        speechBubble.gameObject.SetActive(true);
+        picture.gameObject.SetActive(true);
+        //isCompleted_L = false;
+
+        List&lt;NarrativeDatabase&gt; tempList = NarrativeDatabaseScript.Instance.NarrativeDatabaseList;
+
+        FindCharacters ();
+        characterList[0].GetComponent&lt;CharacterControlScript&gt;().enabled = false;
+        characterList[0].transform.GetChild(1).GetComponent&lt;Animator&gt;().SetBool("Walk", false);
+
+        for (int i = 0; i &lt; tempList.Count; i++)
+        {
+            if(tempList[i].IdNumber == IdNumber)
+            {
+                tempDialogueList = tempList[i].DialogueList;
+                break;
+            }
+        }
+
+        pageNumber = -1;
+        timeElasped = 0;
+        NextPage ();
+    }
+</code></pre>
+
+<p>On Update, the next dialogue can be triggered by click, or when the duration for that dialogue is up.</p>
+
+<pre><code class="language-C#">void Update ()
+{
+    if(speechBubble.gameObject.activeSelf)
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            timeElasped = 0;
+            NextPage ();
+        }
+
+        if(timeElasped &gt; tempDialogueList[pageNumber].duration)
+        {
+            timeElasped = 0;
+            NextPage ();
+        }
+        timeElasped += Time.deltaTime;
+    }
+}
+</code></pre>
+
+  </div><a class="u-url" href="/blog/2018/08/02/narrative-systems-in-mirage-forest" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tensai&#39;s Corner</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tensai&#39;s Corner</li><li><a class="u-email" href="mailto:thianchaiphromsuwan@gmail.com">thianchaiphromsuwan@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Hayashi-Tensai"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Hayashi-Tensai</span></a></li><li><a href="https://www.twitter.com/HayashiTensai"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">HayashiTensai</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
