@@ -5,23 +5,23 @@ permalink: blog/2016/09/08/anime-review-no-game-no-life
 date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review
 slideShow:
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_1.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_2.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_3.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_town_4.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_sora.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_shiro.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_steph.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_chlammy.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_Jibril.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_izuna.png
-- https://tensaiscorner.com/assets/blog-images/anime/ngnl_tet.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_1.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_2.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_3.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_4.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_sora.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_shiro.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_steph.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_chlammy.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_Jibril.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_izuna.png
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_tet.png
 ---
 
 Konnichiwa minna! Today i would like to share another good anime i have watched :D 
 This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.
 
-![NoGameNoLife_Poster](https://tensaiscorner.com/assets/blog-images/anime/No_game_no_life.jpg)
+![NoGameNoLife_Poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/No_game_no_life.jpg)
 
 Story - 9/10  
 First let me briefly give a short summary of how the story goes. it starts of with 2 NEET siblings, Sora and Shiro in Tokyo and there were being summoned into a fantasy world by a some boy named Tet. What is interesting about this fantasy world is that everything is decided entirely by games.
