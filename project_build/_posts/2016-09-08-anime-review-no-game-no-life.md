@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Anime Review! - No Game No Life"
+author: Hayashi Tensai
+excerpt: Konnichiwa minna! Today i would like to share another good anime i have watched :D This is an anime back in 2014 which i watch lately last month. I really liked the how the story is written and the art is also not bad.
 permalink: blog/2016/09/08/anime-review-no-game-no-life
 date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review

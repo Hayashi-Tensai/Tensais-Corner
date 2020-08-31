@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Anime Review! - Re:Zero kara Hajimeru Isekai Seikatsu"
+author: Hayashi Tensai
+excerpt: こんにちは、皆さん！Konnichiwa minna-san! Today I am going to write a review on this anime most commonly known as Re Zero. A friend of mine asked me to give a review on this anime, so i decided to make this my first blog post.
 permalink: blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu
 date:   2016-07-19 19:28:00 +0800
 categories: anime anime-review

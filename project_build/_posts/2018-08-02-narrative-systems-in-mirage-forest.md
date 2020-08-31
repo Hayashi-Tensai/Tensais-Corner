@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Mirage Forest - Narrative Systems"
+author: Hayashi Tensai
+excerpt: Narrative systems for the game, Mirage Forest. This system composed of two scripts the Narrative Database Script and the Narrative Control Script.
 permalink: blog/2018/08/02/narrative-systems-in-mirage-forest
 date:   2018-08-02 10:46:00 +0800
 categories: game-development mirage-forest

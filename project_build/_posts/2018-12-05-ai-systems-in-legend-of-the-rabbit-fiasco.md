@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Legend of the Rabbit Fiasco - AI Systems"
+author: Hayashi Tensai
+excerpt: In this section I will be featuring the AI Systems for the rabbits in the game. Firstly, all three rabbits share the same AI script, differentiating them by using an enum
 permalink: blog/2018/12/05/ai-systems-in-legend-of-the-rabbit fiasco
 date:   2018-12-05 13:22:00 +0800
 categories: game-development legend-of-the-rabbit-fiasco
