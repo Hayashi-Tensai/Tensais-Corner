@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Legend of the Rabbit Fiasco - AI Systems | Tensai’s Corner</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Legend of the Rabbit Fiasco - AI Systems" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The full script can viewed here: https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs" />
+<meta property="og:description" content="The full script can viewed here: https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs" />
+<link rel="canonical" href="http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco" />
+<meta property="og:url" content="http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco" />
+<meta property="og:site_name" content="Tensai’s Corner" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-05T13:22:00+08:00" />
+<script type="application/ld+json">
+{"headline":"Legend of the Rabbit Fiasco - AI Systems","dateModified":"2018-12-05T13:22:00+08:00","datePublished":"2018-12-05T13:22:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco"},"description":"The full script can viewed here: https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs","url":"http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tensai&#39;s Corner</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper" style="background-color:rgba(255, 255, 255, 0.5);">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Legend of the Rabbit Fiasco - AI Systems</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-05T13:22:00+08:00" itemprop="datePublished">Dec 5, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The full script can viewed here:<br />
+<a href="https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs">https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs</a></p>
+
+<p>In this section I will be featuring the AI Systems for the rabbits in the game. Firstly, all three rabbits share the same AI script, differentiating them by using an enum:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">enum</span> <span class="n">RabbitType</span>
+<span class="p">{</span>
+   <span class="n">NORMAL_RABBIT</span><span class="p">,</span>
+   <span class="n">CARROT_RABBIT</span><span class="p">,</span>
+   <span class="n">BIG_RABBIT</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This script is then split into two parts, the movement and attack:</p>
+
+<p><strong>Movement</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">MovementAI</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span> <span class="p">&lt;=</span> <span class="p">-</span><span class="m">8.5f</span><span class="p">)</span>
+        <span class="n">direction</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">right</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span> <span class="p">&gt;=</span> <span class="m">8.5f</span><span class="p">)</span>
+        <span class="n">direction</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">left</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">rabbitType</span> <span class="p">!=</span> <span class="n">RabbitType</span><span class="p">.</span><span class="n">CARROT_RABBIT</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lastPos</span><span class="p">.</span><span class="n">x</span> <span class="p">&lt;</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">lastPos</span> <span class="p">=</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">;</span>
+    <span class="n">transform</span><span class="p">.</span><span class="nf">Translate</span><span class="p">(</span><span class="n">direction</span> <span class="p">*</span> <span class="n">speed</span> <span class="p">*</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>It’s a simple algorithm that moves the rabbit left and right, except the carrot rabbit, that one stays stationary.</p>
+
+<p><strong>Attack</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">AttackAI</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">isAttack</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">rabbitType</span> <span class="p">==</span> <span class="n">RabbitType</span><span class="p">.</span><span class="n">NORMAL_RABBIT</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//! Chasing Player</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">leftAttack</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="nf">MoveTowards</span><span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="n">PlayerControllerScript</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> 
+                <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0.5f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span> <span class="n">speed</span> <span class="p">*</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">);</span>
+            <span class="n">atttackCollider</span><span class="p">.</span><span class="n">enabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">RightAttack</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="nf">MoveTowards</span><span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="n">PlayerControllerScript</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span>
+                <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(-</span><span class="m">0.5f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span> <span class="n">speed</span> <span class="p">*</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">);</span>
+            <span class="n">atttackCollider</span><span class="p">.</span><span class="n">enabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">UpAttack</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">isJump</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<p>This part is the algorithm where the normal rabbit chases the player when the left or right raycast hits the player and​ activates the invisible hit box when they are in range of the player.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">if</span><span class="p">(</span><span class="n">rabbitType</span> <span class="p">==</span> <span class="n">RabbitType</span><span class="p">.</span><span class="n">CARROT_RABBIT</span> <span class="p">&amp;&amp;</span> <span class="n">intervalTime</span> <span class="p">&gt;=</span> <span class="n">damageInterval</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">anim</span><span class="p">.</span><span class="nf">Play</span><span class="p">(</span><span class="s">"Idle No Carrot"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">leftAttack</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CarrotScript</span><span class="p">&gt;().</span><span class="nf">InitSpawn</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">left</span><span class="p">);</span>
+            <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="nf">Instantiate</span><span class="p">(</span><span class="n">carrot</span><span class="p">,</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.2f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">identity</span><span class="p">);</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">RightAttack</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CarrotScript</span><span class="p">&gt;().</span><span class="nf">InitSpawn</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">right</span><span class="p">);</span>
+            <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="nf">Instantiate</span><span class="p">(</span><span class="n">carrot</span><span class="p">,</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.2f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">identity</span><span class="p">);</span>
+            <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">random</span> <span class="p">=</span> <span class="n">Random</span><span class="p">.</span><span class="nf">Range</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">random</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CarrotScript</span><span class="p">&gt;().</span><span class="nf">InitSpawn</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">right</span><span class="p">);</span>
+                <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">CarrotScript</span><span class="p">&gt;().</span><span class="nf">InitSpawn</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">left</span><span class="p">);</span>
+                <span class="n">carrot</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+                <span class="n">transform</span><span class="p">.</span><span class="nf">GetChild</span><span class="p">(</span><span class="m">0</span><span class="p">).</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SpriteRenderer</span><span class="p">&gt;().</span><span class="n">flipX</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="nf">Instantiate</span><span class="p">(</span><span class="n">carrot</span><span class="p">,</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.2f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">identity</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">intervalTime</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">rabbitType</span> <span class="p">!=</span> <span class="n">RabbitType</span><span class="p">.</span><span class="n">CARROT_RABBIT</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//! Dealing Attacks</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">intervalTime</span> <span class="p">&gt;=</span> <span class="n">damageInterval</span> <span class="p">&amp;&amp;</span> <span class="n">isHit</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">PlayerControllerScript</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">currentHealth</span> <span class="p">-=</span> <span class="n">damage</span><span class="p">;</span>
+            <span class="n">intervalTime</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">rabbitType</span> <span class="p">==</span> <span class="n">RabbitType</span><span class="p">.</span><span class="n">NORMAL_RABBIT</span><span class="p">)</span>
+                <span class="n">anim</span><span class="p">.</span><span class="nf">Play</span><span class="p">(</span><span class="s">"Attack"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>     
+<span class="p">}</span>
+</code></pre></div></div>
+<p>As for the carrot rabbit, there is two conditions as you can see, checking the booleans, “leftAttack” and “rightAttack”, these are turned true when the player is its respective direction, and it will shoot the carrot to the direction of the player. Else, it would shoot the carrot at a random direction either left or right.</p>
+
+<p>The last condition at the bottom is for the normal rabbit and the big rabbit, where isHit is true (isHit checks for collision of the attack hit box with the player), it will damage the player on an interval until the player leaves the hitBox.</p>
+
+  </div><a class="u-url" href="/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tensai&#39;s Corner</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tensai&#39;s Corner</li><li><a class="u-email" href="mailto:thianchaiphromsuwan@gmail.com">thianchaiphromsuwan@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Hayashi-Tensai"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Hayashi-Tensai</span></a></li><li><a href="https://www.twitter.com/HayashiTensai"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">HayashiTensai</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
