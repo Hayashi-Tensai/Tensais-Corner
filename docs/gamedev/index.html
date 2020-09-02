@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Tensai’s Corner | Personal Portfolio and Blogs</title>
+<title>Game Pojects | Tensai’s Corner</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Tensai’s Corner" />
+<meta property="og:title" content="Game Pojects" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Personal Portfolio and Blogs" />
 <meta property="og:description" content="Personal Portfolio and Blogs" />
-<link rel="canonical" href="http://localhost:4000/404" />
-<meta property="og:url" content="http://localhost:4000/404" />
+<link rel="canonical" href="http://localhost:4000/gamedev/" />
+<meta property="og:url" content="http://localhost:4000/gamedev/" />
 <meta property="og:site_name" content="Tensai’s Corner" />
 <script type="application/ld+json">
-{"headline":"Tensai’s Corner","description":"Personal Portfolio and Blogs","url":"http://localhost:4000/404","@type":"WebPage","@context":"https://schema.org"}</script>
+{"headline":"Game Pojects","description":"Personal Portfolio and Blogs","url":"http://localhost:4000/gamedev/","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /><script src="/assets/lib/jquery-3.5.1.min.js"></script>
 </head>
@@ -55,7 +55,7 @@
             
               
                 <li>
-                    <a href="/gamedev/" >
+                    <a href="/gamedev/" class="active">
                       Game Pojects
                     </a>
                 </li>
@@ -83,37 +83,37 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-    .container {
-      margin: 10px auto;
-      max-width: 600px;
-      text-align: center;
-    }
-    h1 {
-      margin: 30px 0;
-      font-size: 2em;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-    .message404 {
-        padding-top: 40px;
-    }
-   
-</style>
+        <div>
+    <h1>Game Pojects</h1>
+    <ul id="game-list">
 
-<div class="container">
-    <div style="width: 50%; float: left; padding-right: 10px;">
-        <img src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/404.png" />
-    </div>
-    <div class="message404">
-        <h1>Hi there, you look a little lost...</h1>
-
-        
-        <p>I don't think you are in right page, let me take you the <a href="./">homepage</a></p>
-    </div>
-  
+    </ul>
 </div>
 
+<script>
+    //-------------Liquid scripting start-------------//
+    
+    var pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    
+    //-------------Liquid scripting end-------------//
+    
+    $( document ).ready(function() {
+        onStart();
+    });
+    
+    function onStart() {
+        console.log("All pages: " + pages);
+        
+        for(var i = 0; i < pages.length; i++) {
+            if(pages[i].layout === "game_page") {
+                var game_element =  "<a href=\"" + pages[i].url + "\">" + 
+                                        "<li>" + pages[i].title + "</li>" +
+                                    "</a>";
+
+                $("#game-list").append(game_element);
+            }
+        }
+    };
+</script>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>

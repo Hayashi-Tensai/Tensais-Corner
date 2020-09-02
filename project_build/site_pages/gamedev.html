@@ -1,0 +1,48 @@
+---
+layout: default
+title: Game Pojects
+permalink: /gamedev/
+navigation_weight: 2
+---
+
+<div>
+    <h1>{{page.title}}</h1>
+    <ul id="game-list">
+
+    </ul>
+</div>
+
+<script>
+    //-------------Liquid scripting start-------------//
+    {% capture pages %}
+    [
+        {% for p in site.pages %}
+        {
+        "title"    : "{{ p.title }}",
+        "url"      : "{{ p.url }}",
+        "layout"   : "{{ p.layout }}",
+        } {% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+    ]
+    {% endcapture %}
+    var pages = {{pages | strip_newlines}}
+    //-------------Liquid scripting end-------------//
+    
+    $( document ).ready(function() {
+        onStart();
+    });
+    
+    function onStart() {
+        console.log("All pages: " + pages);
+        
+        for(var i = 0; i < pages.length; i++) {
+            if(pages[i].layout === "game_page") {
+                var game_element =  "<a href=\"" + pages[i].url + "\">" + 
+                                        "<li>" + pages[i].title + "</li>" +
+                                    "</a>";
+
+                $("#game-list").append(game_element);
+            }
+        }
+    };
+</script>

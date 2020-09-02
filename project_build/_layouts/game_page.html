@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+     {%- include head.html -%}
+     
+     <body id="body" style="{%- if page.background -%}background-image: url({{page.background}}){%- endif -%}">
+         <a href="{{"./gamedev/" | relative_url}}">
+             <button>Back</button>
+         </a>
+        {%- if page.title -%}
+            <h1 class="page-heading">{{ page.title }}</h1>
+        {%- endif -%}
+     </body>
+</html>
+
