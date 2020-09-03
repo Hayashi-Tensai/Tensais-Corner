@@ -6,6 +6,13 @@ excerpt: Konnichiwa! Today I'm back with a new review of an anime I have recentl
 permalink: blog/2017/09/07/anime-review-sakurasou-no-pet-na-kanojo
 date:   2017-09-07 15:08:00 +0800
 categories: anime anime-review
+slideShow:
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg
+- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg
 ---
 
 ![Sakurasou-poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_poster.jpg)
@@ -32,7 +39,7 @@ The opening and ending song really matches to the theme of the of the story and 
 </iframe><br>
 
 **Art and Animation 9/10**  
-![Sakurasou-1](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg)
+<div>{%- include slideShow.html images=page.slideShow -%}</div>
 
 The art is not one of the best I have seen so far but it is simple yet nice. And most importantly the art style was consistent over the span of 24 episodes. 
 

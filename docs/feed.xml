@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T15:32:29+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle>Personal Portfolio and Blogs</subtitle><entry><title type="html">Anime Review! - My Roommate is a Cat</title><link href="http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat" rel="alternate" type="text/html" title="Anime Review! - My Roommate is a Cat" /><published>2019-04-16T15:24:00+08:00</published><updated>2019-04-16T15:24:00+08:00</updated><id>http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat</id><content type="html" xml:base="http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg&quot; alt=&quot;My-Roommate-is-a-Cat-poster&quot; /&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T15:41:13+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle>Personal Portfolio and Blogs</subtitle><entry><title type="html">Anime Review! - My Roommate is a Cat</title><link href="http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat" rel="alternate" type="text/html" title="Anime Review! - My Roommate is a Cat" /><published>2019-04-16T15:24:00+08:00</published><updated>2019-04-16T15:24:00+08:00</updated><id>http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat</id><content type="html" xml:base="http://localhost:4000/blog/2019/04/16/anime-review-my-roommate-is-a-cat">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg&quot; alt=&quot;My-Roommate-is-a-Cat-poster&quot; /&gt;&lt;br /&gt;
 &lt;em&gt;(Japanese Title: Doukyonin wa Hiza, Tokidoki, Atama no Ue)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Konnchiwa! It has been almost 2 years since I wrote an anime review. This is an anime that just came last season of Winter 2019. I have watched it till episode 7 on the time of writting and I find it very enjoyable. Without futher ado, let’s get into the review.&lt;/p&gt;
@@ -797,8 +797,112 @@ The opening and ending song really matches to the theme of the of the story and 
 &lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Art and Animation 9/10&lt;/strong&gt;&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg&quot; alt=&quot;Sakurasou-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Art and Animation 9/10&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div id=&quot;gallery&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var slideIndex = 1;
+    var slideInterval = 3;
+    var currentSlideInterval = slideInterval;
+    
+    onStart();
+    
+    function onStart() {
+        showDivs(slideIndex);
+        intervalChange();
+    }
+    
+    function intervalChange() {
+        currentSlideInterval--;
+        if(currentSlideInterval == 0) {
+            plusDivs(1);
+            currentSlideInterval = slideInterval;
+        }
+        
+        setTimeout(intervalChange, 1000);
+    }
+    
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+        currentSlideInterval = slideInterval;
+    }
+    
+    function showDivs(n) {
+        //! Reference HTML Template
+        //&lt;div id=”gallery”&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg&quot;&gt;
+        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg&quot;&gt;
+        //    &lt;button onclick=&quot;plusDivs(-1)&quot;&gt;❮&lt;/button&gt;
+        //    &lt;button onclick=&quot;plusDivs(1)&quot;&gt;❯&lt;/button&gt;
+        //&lt;/div&gt;
+
+        document.getElementById(&quot;gallery&quot;).innerHTML = &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        var img = document.createElement(&quot;IMG&quot;);
+        img.innerHTML = &quot;hello&quot;;
+        img.className = &quot;mySlides&quot;;
+        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(img);
+        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
+        
+        var btnLeft = document.createElement(&quot;BUTTON&quot;);
+        btnLeft.innerHTML = &quot;&lt;&quot;;
+        btnLeft.setAttribute(&quot;onclick&quot;, &quot;plusDivs(-1)&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(btnLeft);
+        
+        var btnRight = document.createElement(&quot;BUTTON&quot;);
+        btnRight.innerHTML = &quot;&gt;&quot;;
+        btnRight.setAttribute(&quot;onclick&quot;, &quot;plusDivs(1)&quot;);
+        document.getElementById(&quot;gallery&quot;).appendChild(btnRight);
+        
+        var i;
+        var x = document.getElementsByClassName(&quot;mySlides&quot;);
+        if (n &gt; x.length)
+            slideIndex = 1;
+        
+        if (n &lt; 1)
+            slideIndex = x.length
+        
+        for (i = 0; i &lt; x.length; i++) {
+            x[i].style.display = &quot;none&quot;;
+        }
+        x[slideIndex-1].style.display = &quot;block&quot;;
+    }
+&lt;/script&gt;&lt;/div&gt;
 
 &lt;p&gt;The art is not one of the best I have seen so far but it is simple yet nice. And most importantly the art style was consistent over the span of 24 episodes.&lt;/p&gt;
 
