@@ -27,6 +27,7 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
   padding-top: $spacing-unit * 0.5;
+  z-index: 99;
 
   .nav-trigger {
       display: none;

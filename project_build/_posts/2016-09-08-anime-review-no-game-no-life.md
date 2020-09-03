@@ -32,11 +32,11 @@ These two siblings then uses their intelligence and strategy in games to survive
 
 Music  8/10  
 Opening Song
-**[Embed Video pending]**
+<iframe width="718" height="404" src="https://www.youtube.com/embed/ooyXoo_Qk0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 The Opening has really motivating and fast tone and some hint of mystery, which somehow describes the feel of the anime. The lyrics is also quite meaningful as it tells the story of the two siblings, Sora and Shiro
 
 Ending Song
-**[Embed Video pending]**
+<iframe width="718" height="404" src="https://www.youtube.com/embed/6kQzRm21N_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 The song has really soft and relaxing tone to it, but when combined with lyrics it gives a feel of a bittersweet childhood.
 
 OSTs  
