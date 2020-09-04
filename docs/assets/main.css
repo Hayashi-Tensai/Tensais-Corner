@@ -170,13 +170,15 @@ table td { border: 1px solid #e8e8e8; }
 
 .blog-system .grid-box { margin: 5px; width: 230px; height: 230px; background-position: center; background-size: cover; float: left; }
 
+.blog-system .grid-box .blog-header { font-size: 13px; line-height: normal; }
+
 .blog-system .grid-box .grid-box-overlay { width: inherit; height: inherit; background-color: rgba(166, 156, 156, 0.5); color: white; }
 
 .blog-system .grid-box .grid-box-overlay:hover { background-color: rgba(166, 156, 156, 0.2); cursor: pointer; }
 
 .blog-system .grid-box .grid-box-content { padding: 10px; }
 
-.blog-system .grid-box .blog-title { padding-top: 130px; font-size: 18px; line-height: normal; height: 50px; align-items: flex-end; display: flex; }
+.blog-system .grid-box .blog-title { padding-top: 100px; font-size: 18px; line-height: normal; height: 50px; align-items: flex-end; display: flex; }
 
 .blog-system .grid-box .blog-excerpt { font-size: 13px; line-height: normal; height: 50px; overflow: hidden; text-overflow: ellipsis; text-align: justify; }
 

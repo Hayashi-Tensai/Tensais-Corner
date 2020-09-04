@@ -7,3 +7,5 @@ navigation_weight: 3
 show_excerpts: 1
 theme_plain: 1
 ---
+
+This is where I write about codes and updates about my games.

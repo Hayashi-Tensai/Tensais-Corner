@@ -2,6 +2,8 @@
     <a id="gridBoxClone" class="grid-box" style="display: none">
         <div class="grid-box-overlay">
             <div class="grid-box-content">
+                <div class="blog-header">
+                </div>
                 <div class="blog-title">
                 </div>
                 <hr>
@@ -20,6 +22,7 @@
     //-------------Liquid scripting start-------------//
     {% capture postList %}
     [
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {% for p in site.posts %}
         {
         "title"    : "{{ p.title }}",
@@ -27,6 +30,8 @@
         "image"      : "{{ p.bg_url }}",
         "excerpt"  : "{{ p.excerpt }}",
         "categories"  : "{{ p.categories }}",
+        "author"  : "{{ p.author }}",
+        "date"  : "{{ p.date | date: date_format }}",
         } {% if forloop.last %}{% else %},{% endif %}
         {% endfor %}
     ]
@@ -50,6 +55,7 @@
                 gridBoxClone.css("display", "");
                 gridBoxClone.css("background-image", "url(" + xBlog_PictGrid.postList[i].image + ")");
                 gridBoxClone.attr("href", xBlog_PictGrid.postList[i].url);
+                gridBoxClone.find(".blog-header").html(xBlog_PictGrid.postList[i].author + "<br>" + xBlog_PictGrid.postList[i].date);
                 gridBoxClone.find(".blog-title").html(xBlog_PictGrid.postList[i].title);
                 gridBoxClone.find(".blog-excerpt").html(xBlog_PictGrid.postList[i].excerpt);
 
