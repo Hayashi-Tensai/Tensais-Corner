@@ -21,7 +21,7 @@ I would say Sabaru as a character can be quite interesting. Being introverted, h
 Another interesting point of this show is that the second half of each episode features the events of the episode from the Haru's perpective, which is pretty cute I would say. At times, she would try to help Subaru through his daily life and Subaru ends up misunderstanding her actions. It's pretty entertaining to see what they have in each other's minds and how they interpret one another being a human and a cat.
 
 On side note, Haru, being a cat also hit the the the top number one spot on anitrendz.net top female characters charts, which is pretty impressive for a cat xD.  
-![My-Roommate-is-a-Cat-poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/haru-ranking.png)
+<img style="max-width:80%;" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/haru-ranking.png"/>
 
 I would say the story is pretty wholesome overall, I'll give it a 10/10 for storyline.
 
