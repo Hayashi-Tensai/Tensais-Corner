@@ -2,69 +2,57 @@
 </div>
 
 <script>
-    var slideIndex = 1;
-    var slideInterval = 3;
-    var currentSlideInterval = slideInterval;
+    var xSlideshow = new Object();
+    xSlideshow.slideIndex = 1;
+    xSlideshow.slideInterval = 100;
+    xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
     
-    onStart();
+    $(document).ready(function() {
+        xSlideshow.onStart();
+    });
     
-    function onStart() {
-        showDivs(slideIndex);
-        intervalChange();
-    }
+    xSlideshow.onStart = function() {
+        xSlideshow.createSlideshow();
+        xSlideshow.showDivs(xSlideshow.slideIndex);
+        xSlideshow.intervalChange();
+    };
     
-    function intervalChange() {
-        currentSlideInterval--;
-        if(currentSlideInterval == 0) {
-            plusDivs(1);
-            currentSlideInterval = slideInterval;
+    xSlideshow.createSlideshow = function(){ 
+        var slideshowContent = "{% for image in include.images %}" + 
+                                    "<img class=\"mySlides\" src=\"{{ image }}\">" + 
+                               "{% endfor %}" +
+                               "<button onclick=\"xSlideshow.plusDivs(-1)\">❮</button>" +
+                               "<button onclick=\"xSlideshow.plusDivs(1)\">❯</button>";
+        $("#gallery").append(slideshowContent);
+    };
+    
+    xSlideshow.intervalChange = function() {
+        xSlideshow.currentSlideInterval--;
+        if(xSlideshow.currentSlideInterval == 0) {
+            xSlideshow.plusDivs(1);
+            xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
         }
         
-        setTimeout(intervalChange, 1000);
-    }
+        setTimeout(xSlideshow.intervalChange, 1000);
+    };
     
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-        currentSlideInterval = slideInterval;
-    }
+    xSlideshow.plusDivs = function(n) {
+        xSlideshow.showDivs(xSlideshow.slideIndex += n);
+        xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+    };
     
-    function showDivs(n) {
-        //! Reference HTML Template
-        //<div id=”gallery”>{% for image in include.images %}
-        //    <img class=”mySlides” src="{{ image }}">{% endfor %}
-        //    <button onclick="plusDivs(-1)">❮</button>
-        //    <button onclick="plusDivs(1)">❯</button>
-        //</div>
-
-        document.getElementById("gallery").innerHTML = "{% for image in include.images %}";
-        var img = document.createElement("IMG");
-        img.innerHTML = "hello";
-        img.className = "mySlides";
-        img.setAttribute("src", "{{ image }}");
-        document.getElementById("gallery").appendChild(img);
-        document.getElementById("gallery").innerHTML = document.getElementById("gallery").innerHTML + "{% endfor %}";
-        
-        var btnLeft = document.createElement("BUTTON");
-        btnLeft.innerHTML = "<";
-        btnLeft.setAttribute("onclick", "plusDivs(-1)");
-        document.getElementById("gallery").appendChild(btnLeft);
-        
-        var btnRight = document.createElement("BUTTON");
-        btnRight.innerHTML = ">";
-        btnRight.setAttribute("onclick", "plusDivs(1)");
-        document.getElementById("gallery").appendChild(btnRight);
-        
+    xSlideshow.showDivs = function(n){
         var i;
         var x = document.getElementsByClassName("mySlides");
         if (n > x.length)
-            slideIndex = 1;
+            xSlideshow.slideIndex = 1;
         
         if (n < 1)
-            slideIndex = x.length
+            xSlideshow.slideIndex = x.length;
         
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        x[slideIndex-1].style.display = "block";
-    }
+        x[xSlideshow.slideIndex-1].style.display = "block";
+    };
 </script>

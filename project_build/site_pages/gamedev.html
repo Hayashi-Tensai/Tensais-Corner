@@ -25,20 +25,22 @@ navigation_weight: 2
         {% endfor %}
     ]
     {% endcapture %}
-    var pages = {{pages | strip_newlines}}
     //-------------Liquid scripting end-------------//
     
-    $( document ).ready(function() {
-        onStart();
+    var xGamedev = new Object();
+    xGamedev.pages = {{pages | strip_newlines}}
+    
+    $(document).ready(function() {
+        xGamedev.onStart();
     });
     
-    function onStart() {
-        console.log("All pages: " + pages);
+    xGamedev.onStart = function() {
+        console.log("All pages: " + xGamedev.pages);
         
-        for(var i = 0; i < pages.length; i++) {
-            if(pages[i].layout === "game_page") {
-                var game_element =  "<a href=\"" + pages[i].url + "\">" + 
-                                        "<li>" + pages[i].title + "</li>" +
+        for(var i = 0; i < xGamedev.pages.length; i++) {
+            if(xGamedev.pages[i].layout === "game_page") {
+                var game_element =  "<a href=\"" + xGamedev.pages[i].url + "\">" + 
+                                        "<li>" + xGamedev.pages[i].title + "</li>" +
                                     "</a>";
 
                 $("#game-list").append(game_element);

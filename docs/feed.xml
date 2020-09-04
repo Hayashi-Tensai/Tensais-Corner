@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-04T10:27:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle>Personal Portfolio and Blogs</subtitle><entry><title type="html">Anime Review: Chuunibyou demo Koi ga Shitai! Movie: Take On Me</title><link href="http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me" rel="alternate" type="text/html" title="Anime Review: Chuunibyou demo Koi ga Shitai! Movie: Take On Me" /><published>2020-06-10T21:10:00+08:00</published><updated>2020-06-10T21:10:00+08:00</updated><id>http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me</id><content type="html" xml:base="http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chunnibyou-movie-poster.jpg&quot; alt=&quot;Chunnibyou-Movie-Poster&quot; /&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-04T15:52:03+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tensai’s Corner</title><subtitle>Personal Portfolio and Blogs</subtitle><entry><title type="html">Anime Review: Chuunibyou demo Koi ga Shitai! Movie: Take On Me</title><link href="http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me" rel="alternate" type="text/html" title="Anime Review: Chuunibyou demo Koi ga Shitai! Movie: Take On Me" /><published>2020-06-10T21:10:00+08:00</published><updated>2020-06-10T21:10:00+08:00</updated><id>http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me</id><content type="html" xml:base="http://localhost:4000/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chunnibyou-movie-poster.jpg&quot; alt=&quot;Chunnibyou-Movie-Poster&quot; /&gt;&lt;br /&gt;
 (Warning! contains minor spoilers, certain parts of the review would refer to prior knowledge after the events of season 1)&lt;/p&gt;
 
 &lt;p&gt;Konbanwa, Today I will be reviewing one of KyoAni’s masterpieces, Chuunibyou demo Koi ga Shitai! but i will be focusing the review more on the movie.&lt;/p&gt;
@@ -310,92 +310,65 @@ Above: The fire wave&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
-    var slideIndex = 1;
-    var slideInterval = 3;
-    var currentSlideInterval = slideInterval;
+    var xSlideshow = new Object();
+    xSlideshow.slideIndex = 1;
+    xSlideshow.slideInterval = 100;
+    xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
     
-    onStart();
+    $(document).ready(function() {
+        xSlideshow.onStart();
+    });
     
-    function onStart() {
-        showDivs(slideIndex);
-        intervalChange();
-    }
+    xSlideshow.onStart = function() {
+        xSlideshow.createSlideshow();
+        xSlideshow.showDivs(xSlideshow.slideIndex);
+        xSlideshow.intervalChange();
+    };
     
-    function intervalChange() {
-        currentSlideInterval--;
-        if(currentSlideInterval == 0) {
-            plusDivs(1);
-            currentSlideInterval = slideInterval;
+    xSlideshow.createSlideshow = function(){ 
+        var slideshowContent = &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-1.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-2.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-3.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-4.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; +
+                               &quot;&lt;button onclick=\&quot;xSlideshow.plusDivs(-1)\&quot;&gt;❮&lt;/button&gt;&quot; +
+                               &quot;&lt;button onclick=\&quot;xSlideshow.plusDivs(1)\&quot;&gt;❯&lt;/button&gt;&quot;;
+        $(&quot;#gallery&quot;).append(slideshowContent);
+    };
+    
+    xSlideshow.intervalChange = function() {
+        xSlideshow.currentSlideInterval--;
+        if(xSlideshow.currentSlideInterval == 0) {
+            xSlideshow.plusDivs(1);
+            xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
         }
         
-        setTimeout(intervalChange, 1000);
-    }
+        setTimeout(xSlideshow.intervalChange, 1000);
+    };
     
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-        currentSlideInterval = slideInterval;
-    }
+    xSlideshow.plusDivs = function(n) {
+        xSlideshow.showDivs(xSlideshow.slideIndex += n);
+        xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+    };
     
-    function showDivs(n) {
-        //! Reference HTML Template
-        //&lt;div id=”gallery”&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-1.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-2.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-3.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-4.jpg&quot;&gt;
-        //    &lt;button onclick=&quot;plusDivs(-1)&quot;&gt;❮&lt;/button&gt;
-        //    &lt;button onclick=&quot;plusDivs(1)&quot;&gt;❯&lt;/button&gt;
-        //&lt;/div&gt;
-
-        document.getElementById(&quot;gallery&quot;).innerHTML = &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-1.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-2.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-3.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-4.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        
-        var btnLeft = document.createElement(&quot;BUTTON&quot;);
-        btnLeft.innerHTML = &quot;&lt;&quot;;
-        btnLeft.setAttribute(&quot;onclick&quot;, &quot;plusDivs(-1)&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(btnLeft);
-        
-        var btnRight = document.createElement(&quot;BUTTON&quot;);
-        btnRight.innerHTML = &quot;&gt;&quot;;
-        btnRight.setAttribute(&quot;onclick&quot;, &quot;plusDivs(1)&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(btnRight);
-        
+    xSlideshow.showDivs = function(n){
         var i;
         var x = document.getElementsByClassName(&quot;mySlides&quot;);
         if (n &gt; x.length)
-            slideIndex = 1;
+            xSlideshow.slideIndex = 1;
         
         if (n &lt; 1)
-            slideIndex = x.length
+            xSlideshow.slideIndex = x.length;
         
         for (i = 0; i &lt; x.length; i++) {
             x[i].style.display = &quot;none&quot;;
         }
-        x[slideIndex-1].style.display = &quot;block&quot;;
-    }
+        x[xSlideshow.slideIndex-1].style.display = &quot;block&quot;;
+    };
 &lt;/script&gt;&lt;/div&gt;
 &lt;p&gt;Above: The final type sequence of phase 3.&lt;/p&gt;</content><author><name>Hayashi Tensai</name></author><category term="game-development" /><category term="enchanter" /><summary type="html">This one of the first scripts that I wrote in Unity 3 years ago in our first game project together as a team, it's quite a simple algorithm that controls Ifrit's attack pattern and it is split into 3 phases.</summary></entry><entry><title type="html">Legend of the Rabbit Fiasco - AI Systems</title><link href="http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco" rel="alternate" type="text/html" title="Legend of the Rabbit Fiasco - AI Systems" /><published>2018-12-05T13:22:00+08:00</published><updated>2018-12-05T13:22:00+08:00</updated><id>http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit-fiasco</id><content type="html" xml:base="http://localhost:4000/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit%20fiasco">&lt;p&gt;The full script can viewed here:&lt;br /&gt;
 &lt;a href=&quot;https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs&quot;&gt;https://github.com/Hayashi-Tensai/Legend-of-the-rabbit-fiasco/blob/master/Legend%20of%20the%20Rabbit%20Fiasco/Assets/Scripts/Rabbit/RabbitAIScript.cs&lt;/a&gt;&lt;/p&gt;
@@ -824,106 +797,69 @@ The opening and ending song really matches to the theme of the of the story and 
 &lt;/div&gt;
 
 &lt;script&gt;
-    var slideIndex = 1;
-    var slideInterval = 3;
-    var currentSlideInterval = slideInterval;
+    var xSlideshow = new Object();
+    xSlideshow.slideIndex = 1;
+    xSlideshow.slideInterval = 100;
+    xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
     
-    onStart();
+    $(document).ready(function() {
+        xSlideshow.onStart();
+    });
     
-    function onStart() {
-        showDivs(slideIndex);
-        intervalChange();
-    }
+    xSlideshow.onStart = function() {
+        xSlideshow.createSlideshow();
+        xSlideshow.showDivs(xSlideshow.slideIndex);
+        xSlideshow.intervalChange();
+    };
     
-    function intervalChange() {
-        currentSlideInterval--;
-        if(currentSlideInterval == 0) {
-            plusDivs(1);
-            currentSlideInterval = slideInterval;
+    xSlideshow.createSlideshow = function(){ 
+        var slideshowContent = &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; + 
+                                    &quot;&lt;img class=\&quot;mySlides\&quot; src=\&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg\&quot;&gt;&quot; + 
+                               &quot;&quot; +
+                               &quot;&lt;button onclick=\&quot;xSlideshow.plusDivs(-1)\&quot;&gt;❮&lt;/button&gt;&quot; +
+                               &quot;&lt;button onclick=\&quot;xSlideshow.plusDivs(1)\&quot;&gt;❯&lt;/button&gt;&quot;;
+        $(&quot;#gallery&quot;).append(slideshowContent);
+    };
+    
+    xSlideshow.intervalChange = function() {
+        xSlideshow.currentSlideInterval--;
+        if(xSlideshow.currentSlideInterval == 0) {
+            xSlideshow.plusDivs(1);
+            xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
         }
         
-        setTimeout(intervalChange, 1000);
-    }
+        setTimeout(xSlideshow.intervalChange, 1000);
+    };
     
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-        currentSlideInterval = slideInterval;
-    }
+    xSlideshow.plusDivs = function(n) {
+        xSlideshow.showDivs(xSlideshow.slideIndex += n);
+        xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+    };
     
-    function showDivs(n) {
-        //! Reference HTML Template
-        //&lt;div id=”gallery”&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg&quot;&gt;
-        //    &lt;img class=”mySlides” src=&quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg&quot;&gt;
-        //    &lt;button onclick=&quot;plusDivs(-1)&quot;&gt;❮&lt;/button&gt;
-        //    &lt;button onclick=&quot;plusDivs(1)&quot;&gt;❯&lt;/button&gt;
-        //&lt;/div&gt;
-
-        document.getElementById(&quot;gallery&quot;).innerHTML = &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        var img = document.createElement(&quot;IMG&quot;);
-        img.innerHTML = &quot;hello&quot;;
-        img.className = &quot;mySlides&quot;;
-        img.setAttribute(&quot;src&quot;, &quot;https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(img);
-        document.getElementById(&quot;gallery&quot;).innerHTML = document.getElementById(&quot;gallery&quot;).innerHTML + &quot;&quot;;
-        
-        var btnLeft = document.createElement(&quot;BUTTON&quot;);
-        btnLeft.innerHTML = &quot;&lt;&quot;;
-        btnLeft.setAttribute(&quot;onclick&quot;, &quot;plusDivs(-1)&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(btnLeft);
-        
-        var btnRight = document.createElement(&quot;BUTTON&quot;);
-        btnRight.innerHTML = &quot;&gt;&quot;;
-        btnRight.setAttribute(&quot;onclick&quot;, &quot;plusDivs(1)&quot;);
-        document.getElementById(&quot;gallery&quot;).appendChild(btnRight);
-        
+    xSlideshow.showDivs = function(n){
         var i;
         var x = document.getElementsByClassName(&quot;mySlides&quot;);
         if (n &gt; x.length)
-            slideIndex = 1;
+            xSlideshow.slideIndex = 1;
         
         if (n &lt; 1)
-            slideIndex = x.length
+            xSlideshow.slideIndex = x.length;
         
         for (i = 0; i &lt; x.length; i++) {
             x[i].style.display = &quot;none&quot;;
         }
-        x[slideIndex-1].style.display = &quot;block&quot;;
-    }
+        x[xSlideshow.slideIndex-1].style.display = &quot;block&quot;;
+    };
 &lt;/script&gt;&lt;/div&gt;
 
 &lt;p&gt;The art is not one of the best I have seen so far but it is simple yet nice. And most importantly the art style was consistent over the span of 24 episodes.&lt;/p&gt;

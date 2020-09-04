@@ -15,8 +15,8 @@
 <script type="application/ld+json">
 {"headline":"Game Pojects","description":"Personal Portfolio and Blogs","url":"http://localhost:4000/gamedev/","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /><script src="/assets/lib/jquery-3.5.1.min.js"></script>
-  <script src="/assets/lib/youtube-autoresizer.js"></script>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /><script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="/assets/js/youtube-autoresizer.js"></script>
 </head>
 <body><header class="site-header" role="banner">
 
@@ -94,20 +94,22 @@
 <script>
     //-------------Liquid scripting start-------------//
     
-    var pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    
     //-------------Liquid scripting end-------------//
     
-    $( document ).ready(function() {
-        onStart();
+    var xGamedev = new Object();
+    xGamedev.pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    
+    
+    $(document).ready(function() {
+        xGamedev.onStart();
     });
     
-    function onStart() {
-        console.log("All pages: " + pages);
+    xGamedev.onStart = function() {
+        console.log("All pages: " + xGamedev.pages);
         
-        for(var i = 0; i < pages.length; i++) {
-            if(pages[i].layout === "game_page") {
-                var game_element =  "<a href=\"" + pages[i].url + "\">" + 
-                                        "<li>" + pages[i].title + "</li>" +
+        for(var i = 0; i < xGamedev.pages.length; i++) {
+            if(xGamedev.pages[i].layout === "game_page") {
+                var game_element =  "<a href=\"" + xGamedev.pages[i].url + "\">" + 
+                                        "<li>" + xGamedev.pages[i].title + "</li>" +
                                     "</a>";
 
                 $("#game-list").append(game_element);
