@@ -1,0 +1,67 @@
+<div class="blog-system">
+    <a id="gridBoxClone" class="grid-box" style="display: none">
+        <div class="grid-box-overlay">
+            <div class="grid-box-content">
+                <div class="blog-title">
+                </div>
+                <hr>
+                <div class="blog-excerpt" style="display: none">
+                </div>
+                <div class="blog-footer">
+                    <img style="height: inherit" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon-view-eye.png"/>
+                    <span style="font-size: 12px" class="view-count"></span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<script>
+    //-------------Liquid scripting start-------------//
+    {% capture postList %}
+    [
+        {% for p in site.posts %}
+        {
+        "title"    : "{{ p.title }}",
+        "url"      : "{{ p.url | relative_url }}",
+        "image"      : "{{ p.bg_url }}",
+        "excerpt"  : "{{ p.excerpt }}",
+        "categories"  : "{{ p.categories }}",
+        } {% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+    ]
+    {% endcapture %}
+    {% capture category %}
+        "{{ include.category }}"
+    {% endcapture %}
+    //-------------Liquid scripting end-------------//
+    
+    var xBlog_PictGrid = new Object();
+    xBlog_PictGrid.postList = {{postList | strip_newlines}};
+    xBlog_PictGrid.category = {{category}};
+    
+    $(document).ready(function () {
+        
+        for(var i = 0; i < xBlog_PictGrid.postList.length; i++)
+        {
+            if(xBlog_PictGrid.postList[i].categories.includes(xBlog_PictGrid.category)) {
+                var gridBoxClone = $("#gridBoxClone").clone();
+                gridBoxClone.attr("id", "gridBox" + i);
+                gridBoxClone.css("display", "");
+                gridBoxClone.css("background-image", "url(" + xBlog_PictGrid.postList[i].image + ")");
+                gridBoxClone.attr("href", xBlog_PictGrid.postList[i].url);
+                gridBoxClone.find(".blog-title").html(xBlog_PictGrid.postList[i].title);
+                gridBoxClone.find(".blog-excerpt").html(xBlog_PictGrid.postList[i].excerpt);
+
+                $(".blog-system").append(gridBoxClone);
+            }
+        }
+        $(".view-count").html(0); //! temp value
+        
+        $(".blog-system .grid-box").click(function (e) {
+            window.open($(this).attr("url"), "_self");
+        });
+    });
+    
+    
+</script>

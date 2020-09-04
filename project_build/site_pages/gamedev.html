@@ -28,14 +28,14 @@ navigation_weight: 2
     //-------------Liquid scripting end-------------//
     
     var xGamedev = new Object();
-    xGamedev.pages = {{pages | strip_newlines}}
+    xGamedev.pages = {{pages | strip_newlines}};
     
     $(document).ready(function() {
         xGamedev.onStart();
     });
     
     xGamedev.onStart = function() {
-        console.log("All pages: " + xGamedev.pages);
+        console.log(xGamedev.pages);
         
         for(var i = 0; i < xGamedev.pages.length; i++) {
             if(xGamedev.pages[i].layout === "game_page") {

@@ -97,14 +97,14 @@
     //-------------Liquid scripting end-------------//
     
     var xGamedev = new Object();
-    xGamedev.pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    
+    xGamedev.pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    ;
     
     $(document).ready(function() {
         xGamedev.onStart();
     });
     
     xGamedev.onStart = function() {
-        console.log("All pages: " + xGamedev.pages);
+        console.log(xGamedev.pages);
         
         for(var i = 0; i < xGamedev.pages.length; i++) {
             if(xGamedev.pages[i].layout === "game_page") {

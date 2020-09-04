@@ -6,6 +6,7 @@ excerpt: I decided to translate the lyrics of this song because I liked the song
 permalink: blog/2017/05/20/maigo-no-kaijuu-lyrics
 date:   2017-05-20 20:34:00 +0800
 categories: anime question-time
+bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/kanna-in-the-rain.jpg
 ---
 
 <iframe width="729" height="410" src="https://www.youtube.com/embed/h0LSxYbGDzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>

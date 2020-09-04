@@ -6,6 +6,7 @@ excerpt: It has been truly a sad past day for the anime community. Yesterday (Ju
 permalink: blog/2019/07/19/kyoani-incident-a-sad-day-to-remember
 date:   2019-07-19 10:13:00 +0800
 categories: anime
+bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/kyoani.jpg
 ---
 
 It has been truly a sad past day for the anime community. Yesterday (July 18, 2019), Kyoto Animation's studio was lighted up on fire by a 41 year old man, which has so far killed 33 people and many injured. Even after waking up today, it still shocks me that someone would do something like that to the studio. 

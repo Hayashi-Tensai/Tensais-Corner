@@ -6,6 +6,7 @@ excerpt: Konnichiwa! I'm back again with another article, this time on Hyperdime
 permalink: blog/2016/11/15/game-concept-review-hyperdimension-neptunia-rebirth-2
 date:   2016-11-15 14:16:00 +0800
 categories: anime game-review
+bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/rebirth-2.jpg
 ---
 
 Konnichiwa! I'm back again with another article, this time on Hyperdimension Neptunia Rebirth 2

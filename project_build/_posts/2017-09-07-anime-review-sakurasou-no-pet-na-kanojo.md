@@ -6,6 +6,7 @@ excerpt: Konnichiwa! Today I'm back with a new review of an anime I have recentl
 permalink: blog/2017/09/07/anime-review-sakurasou-no-pet-na-kanojo
 date:   2017-09-07 15:08:00 +0800
 categories: anime anime-review
+bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_poster.jpg
 slideShow:
 - https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg
 - https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg
