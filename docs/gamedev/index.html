@@ -31,10 +31,18 @@
         </label>
 
         <div class="trigger">
-<!--<a class="page-link" href="/gamedev/enchanter/">Enchanter</a><a class="page-link" href="/about/">About</a><a class="page-link" href="/anime_stuff/">Anime Stuff</a><a class="page-link" href="/game_dev_blog/">Dev Blog</a><a class="page-link" href="/gamedev/">Game Pojects</a>-->
+<!--<a class="page-link" href="/about/">About</a><a class="page-link" href="/anime_stuff/">Anime Stuff</a><a class="page-link" href="/gamedev/bridge-fortress/">Bridge Fortress</a><a class="page-link" href="/game_dev_blog/">Dev Blog</a><a class="page-link" href="/gamedev/enchanter/">Enchanter</a><a class="page-link" href="/gamedev/flowin-pipeline/">Flow&#39;n Pipeline</a><a class="page-link" href="/gamedev/">Game Pojects</a><a class="page-link" href="/gamedev/legend-of-the-rabbit-fiasco/">Legend of the Rabbit Fiasco</a><a class="page-link" href="/gamedev/mirage-forest/">Mirage Forest</a>-->
           
         <ul class="nav-bar">
             
+            
+              
+            
+              
+            
+              
+            
+              
             
               
             
@@ -86,9 +94,17 @@
       <div class="wrapper">
         <div>
     <h1>Game Pojects</h1>
-    <ul id="game-list">
-
-    </ul>
+    <div id="game-list" class="game-list">
+        <div id="gameBoxClone" class="game-container" style="display: none;">
+            <img class="game-image" />
+            <div style="padding: 10px">
+                <div class="game-title"></div>
+                <div style="text-align: right;"><span class="game-year"></span> | <span class="game-platform"></span></div>
+                <div class="game-description"></div>
+                <a><button>More</button></a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -97,7 +113,7 @@
     //-------------Liquid scripting end-------------//
     
     var xGamedev = new Object();
-    xGamedev.pages =     [                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        }             ]    ;
+    xGamedev.pages =     [                        {        "title"    : "Legend of the Rabbit Fiasco",        "url"      : "/gamedev/legend-of-the-rabbit-fiasco/",        "layout"   : "game_page",        "year"   : "2018",        "platform"   : "Windows PC",        "image"   : "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/legend-of-the-rabbit-fiasco_logo.png",        "description"   : "An action/beat-em-up game where you play as a witch against the rabbit fiasco. Your goal is to survive 60 seconds and achieve the highest score.",        } ,                {        "title"    : "Mirage Forest",        "url"      : "/gamedev/mirage-forest/",        "layout"   : "game_page",        "year"   : "2018",        "platform"   : "Windows PC",        "image"   : "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/mirage-forest.png",        "description"   : "Kaizen wakes up and finds he has amnesia and has awoken in a mysterious world and he vaguely remembers is that he is searching for his “waifu”. Thus he begins his search to find clues on where the waifu could be.",        } ,                {        "title"    : "Flow'n Pipeline",        "url"      : "/gamedev/flowin-pipeline/",        "layout"   : "game_page",        "year"   : "2017",        "platform"   : "Windows PC, Android",        "image"   : "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_logo.png",        "description"   : "Flow'n Pipeline is a plumbing game where you have to drag and drop the pipes to get the water flowing the other end.",        } ,                {        "title"    : "Bridge Fortress",        "url"      : "/gamedev/bridge-fortress/",        "layout"   : "game_page",        "year"   : "2017",        "platform"   : "Android",        "image"   : "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/bridge-fortress-logo.jpg",        "description"   : "Bridge Fortress is a puzzle-adventure game where the player takes on the role of a knight’s rational squire. The player manipulates the bridges to help the knight to move around enemies and reach the end of each level.",        } ,                {        "title"    : "Enchanter",        "url"      : "/gamedev/enchanter/",        "layout"   : "game_page",        "year"   : "2017",        "platform"   : "Windows PC",        "image"   : "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter_logo.gif",        "description"   : "Once upon a time, There is a jinni that is sick of granting wishes, the jinni then decided to summon demons to the land and destroy the humans. You play as a battle mage on a quest to exorcise these demons and defeat the jinni once and for all.",        } ,                {        "title"    : "Game Pojects",        "url"      : "/gamedev/",        "layout"   : "default",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "",        "url"      : "/feed.xml",        "layout"   : "",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "",        "url"      : "/",        "layout"   : "home",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "Dev Blog",        "url"      : "/game_dev_blog/",        "layout"   : "blog_by_category",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "",        "url"      : "/assets/main.css",        "layout"   : "",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "Anime Stuff",        "url"      : "/anime_stuff/",        "layout"   : "blog_by_category",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "About",        "url"      : "/about/",        "layout"   : "page",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        } ,                {        "title"    : "",        "url"      : "/404",        "layout"   : "default",        "year"   : "",        "platform"   : "",        "image"   : "",        "description"   : "",        }             ]    ;
     
     $(document).ready(function() {
         xGamedev.onStart();
@@ -108,11 +124,16 @@
         
         for(var i = 0; i < xGamedev.pages.length; i++) {
             if(xGamedev.pages[i].layout === "game_page") {
-                var game_element =  "<a href=\"" + xGamedev.pages[i].url + "\">" + 
-                                        "<li>" + xGamedev.pages[i].title + "</li>" +
-                                    "</a>";
-
-                $("#game-list").append(game_element);
+                var gameBoxClone = $("#gameBoxClone").clone();
+                gameBoxClone.attr("id", "gameBox" + i);
+                gameBoxClone.css("display", "");
+                gameBoxClone.find(".game-title").html(xGamedev.pages[i].title);
+                gameBoxClone.find(".game-year").html(xGamedev.pages[i].year);
+                gameBoxClone.find(".game-platform").html(xGamedev.pages[i].platform);
+                gameBoxClone.find(".game-description").html(xGamedev.pages[i].description);
+                gameBoxClone.find(".game-image").attr("src", xGamedev.pages[i].image);
+                gameBoxClone.find("a").attr("href", xGamedev.pages[i].url);
+                $("#game-list").append(gameBoxClone);
             }
         }
     };

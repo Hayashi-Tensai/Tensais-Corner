@@ -2,13 +2,82 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
      {%- include head.html -%}
      
-     <body id="body" style="{%- if page.background -%}background-image: url({{page.background}}){%- endif -%}">
-         <a href="{{"./gamedev/" | relative_url}}">
-             <button>Back</button>
-         </a>
-        {%- if page.title -%}
-            <h1 class="page-heading">{{ page.title }}</h1>
-        {%- endif -%}
-     </body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <body id="body" class="game-page" style="{%- if page.background -%}background-image: url({{page.background}});
+            {%- endif -%}{%- if page.color -%}color: {{page.color}};{%- endif -%}">
+            <a href="{{"./gamedev/" | relative_url}}">
+                <button style="{%- if page.color -%}color: {{page.color}}; border-color: {{page.color}}{%- endif -%}">< Back</button>
+            </a>
+            {%- if page.title -%}
+                <h1 class="page-heading">{{ page.title }}</h1>
+            {%- endif -%}
+            <div style="padding-bottom: 10px">
+                <div class="page-description-left">
+                    {%- if page.video_url -%}
+                        <iframe width="480" height="277" src="{{page.video_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    {%- endif -%}
+                    {%- if page.slideshow -%}
+                        <div>{%- include slideShow.html images=page.slideshow -%}</div>
+                    {%- endif -%}
+                    {%- if page.description-image -%}
+                        <img src="{{page.description-image}}" />
+                    {%- endif -%}
+                    {%- if page.gameplay -%}
+                        <u><strong>Gameplay</strong></u>
+                        <div style="padding-bottom: 15px;">
+                            {{page.gameplay}}
+                        </div>
+                    {%- endif -%}
+                    {%- if page.itch_url -%}
+                        <a href="{{page.itch_url}}" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_itch_io_download.png"/>
+                        </a>
+                    {%- endif -%}
+                    {%- if page.windows_url -%}
+                        <a href="{{page.windows_url}}" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_windows_download.png"/>
+                        </a>
+                    {%- endif -%}
+                    {%- if page.google_play_url -%}
+                        <a href="{{page.google_play_url}}" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_google_play_download.png"/>
+                        </a>
+                    {%- endif -%}
+                    {%- if page.android_url -%}
+                        <a href="{{page.android_url}}" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_android_download.png"/>
+                        </a>
+                    {%- endif -%}
+                    {%- if page.github_url -%}
+                        <a href="{{page.github_url}}" target="_blank">
+                            <img style="width: 200px; padding-top: 5px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_view_on_github.png"/>
+                        </a>
+                    {%- endif -%}
+                    {%- if page.is_glenmarie_games -%}
+                        <div style="text-align: left;">
+                            An educational project from:
+                            <a href="https://uowmgames.itch.io/" target="_blank">
+                                <br><img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_glenmarie_games.png"/>
+                            </a>
+                        </div>
+                    {%- endif -%}
+                </div>
+                <div class="page-description-right">
+                    {{content}}
+                </div>
+            </div>
+            <div style="float: left">
+            {%- if page.category -%}
+                <h2><u>Featured Content</u></h2>
+                {%- include blog-listing_plain.html category=page.category -%}
+            {%- endif -%}
+            </div>
+        </body>
+      </div>
+    </main>
+     
+     
 </html>
 

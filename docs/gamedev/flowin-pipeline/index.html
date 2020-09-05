@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Flow’n Pipeline | Tensai’s Corner</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Flow’n Pipeline" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Flow’n Pipeline is a plumbing game where you have to drag and drop the pipes to get the water flowing the other end." />
+<meta property="og:description" content="Flow’n Pipeline is a plumbing game where you have to drag and drop the pipes to get the water flowing the other end." />
+<link rel="canonical" href="http://localhost:4000/gamedev/flowin-pipeline/" />
+<meta property="og:url" content="http://localhost:4000/gamedev/flowin-pipeline/" />
+<meta property="og:site_name" content="Tensai’s Corner" />
+<meta property="og:image" content="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_logo.png" />
+<script type="application/ld+json">
+{"image":"https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_logo.png","headline":"Flow’n Pipeline","description":"Flow’n Pipeline is a plumbing game where you have to drag and drop the pipes to get the water flowing the other end.","url":"http://localhost:4000/gamedev/flowin-pipeline/","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tensai's Corner" /><script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="/assets/js/youtube-autoresizer.js"></script>
+</head>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <body id="body" class="game-page" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_bg.png);color: #F7CF83;">
+            <a href="/gamedev/">
+                <button style="color: #F7CF83; border-color: #F7CF83">< Back</button>
+            </a><h1 class="page-heading">Flow'n Pipeline</h1><div style="padding-bottom: 10px">
+                <div class="page-description-left"><div><div id="gallery">
+</div>
+
+<script>
+    var xSlideshow = new Object();
+    xSlideshow.slideIndex = 1;
+    xSlideshow.slideInterval = 3;
+    xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+    
+    $(document).ready(function() {
+        xSlideshow.onStart();
+    });
+    
+    xSlideshow.onStart = function() {
+        xSlideshow.createSlideshow();
+        xSlideshow.showDivs(xSlideshow.slideIndex);
+        xSlideshow.intervalChange();
+    };
+    
+    xSlideshow.createSlideshow = function(){ 
+        var slideshowContent = "" + 
+                                    "<img class=\"mySlides\" src=\"https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_1.png\">" + 
+                               "" + 
+                                    "<img class=\"mySlides\" src=\"https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_2.png\">" + 
+                               "" + 
+                                    "<img class=\"mySlides\" src=\"https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/flowin-pipeline_3.png\">" + 
+                               "" +
+                               "<button onclick=\"xSlideshow.plusDivs(-1)\">❮</button>" +
+                               "<button onclick=\"xSlideshow.plusDivs(1)\">❯</button>";
+        $("#gallery").append(slideshowContent);
+    };
+    
+    xSlideshow.intervalChange = function() {
+        xSlideshow.currentSlideInterval--;
+        if(xSlideshow.currentSlideInterval == 0) {
+            xSlideshow.plusDivs(1);
+            xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+        }
+        
+        setTimeout(xSlideshow.intervalChange, 1000);
+    };
+    
+    xSlideshow.plusDivs = function(n) {
+        xSlideshow.showDivs(xSlideshow.slideIndex += n);
+        xSlideshow.currentSlideInterval = xSlideshow.slideInterval;
+    };
+    
+    xSlideshow.showDivs = function(n){
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length)
+            xSlideshow.slideIndex = 1;
+        
+        if (n < 1)
+            xSlideshow.slideIndex = x.length;
+        
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[xSlideshow.slideIndex-1].style.display = "block";
+    };
+</script></div><a href="https://drive.google.com/uc?export=download&id=1CtV-PrYluHxwPCdX06x8IRyDIXGq8YR4" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_windows_download.png"/>
+                        </a><a href="https://drive.google.com/uc?export=download&id=1iZA0Y1UUNvRwMNUGmprYslVMI1yEHVgF" target="_blank">
+                            <img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_android_download.png"/>
+                        </a><div style="text-align: left;">
+                            An educational project from:
+                            <a href="https://uowmgames.itch.io/" target="_blank">
+                                <br><img style="width: 160px" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon_glenmarie_games.png"/>
+                            </a>
+                        </div></div>
+                <div class="page-description-right">
+                    <p><strong>Developed by Team Just One</strong>
+2017 | Windows PC, Android</p>
+
+<p><strong>Designer</strong><br />
+Darien Goh</p>
+
+<p><strong>Programmer</strong><br />
+Thianchai Phromsuwuwan</p>
+
+<p><strong>Artist</strong><br />
+Jan Wong</p>
+
+<p><strong>Gameplay</strong><br />
+Flow’n Pipeline is a plumbing game where you have to drag and drop the pipes to get the water flowing the other end.</p>
+
+                </div>
+            </div>
+            <div style="float: left"></div>
+        </body>
+      </div>
+    </main>
+     
+     
+</html>
+

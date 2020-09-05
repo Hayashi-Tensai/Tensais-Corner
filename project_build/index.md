@@ -12,6 +12,9 @@ Welcome to Tensai's Corner, The webisite is still in progress as I am currently 
         <a href="{{ '/anime_stuff' | relative_url }}">Anime Stuff</a>
     </li>
     <li>
+        <a href="{{ '/gamedev' | relative_url }}">Game Projects</a>
+    </li>
+    <li>
         <a href="{{ '/game_dev_blog' | relative_url }}">Dev Blog</a>
     </li>
     <li>

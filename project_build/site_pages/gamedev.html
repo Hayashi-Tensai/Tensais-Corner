@@ -7,20 +7,33 @@ navigation_weight: 2
 
 <div>
     <h1>{{page.title}}</h1>
-    <ul id="game-list">
-
-    </ul>
+    <div id="game-list" class="game-list">
+        <div id="gameBoxClone" class="game-container" style="display: none;">
+            <img class="game-image" />
+            <div style="padding: 10px">
+                <div class="game-title"></div>
+                <div style="text-align: right;"><span class="game-year"></span> | <span class="game-platform"></span></div>
+                <div class="game-description"></div>
+                <a><button>More</button></a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
     //-------------Liquid scripting start-------------//
     {% capture pages %}
     [
-        {% for p in site.pages %}
+        {% assign game_pages = site.pages | sort: 'game_order' | reverse %}
+        {% for p in game_pages %}
         {
         "title"    : "{{ p.title }}",
         "url"      : "{{ p.url }}",
         "layout"   : "{{ p.layout }}",
+        "year"   : "{{ p.year }}",
+        "platform"   : "{{ p.platform }}",
+        "image"   : "{{ p.image }}",
+        "description"   : "{{ p.description }}",
         } {% if forloop.last %}{% else %},{% endif %}
         {% endfor %}
     ]
@@ -39,11 +52,16 @@ navigation_weight: 2
         
         for(var i = 0; i < xGamedev.pages.length; i++) {
             if(xGamedev.pages[i].layout === "game_page") {
-                var game_element =  "<a href=\"" + xGamedev.pages[i].url + "\">" + 
-                                        "<li>" + xGamedev.pages[i].title + "</li>" +
-                                    "</a>";
-
-                $("#game-list").append(game_element);
+                var gameBoxClone = $("#gameBoxClone").clone();
+                gameBoxClone.attr("id", "gameBox" + i);
+                gameBoxClone.css("display", "");
+                gameBoxClone.find(".game-title").html(xGamedev.pages[i].title);
+                gameBoxClone.find(".game-year").html(xGamedev.pages[i].year);
+                gameBoxClone.find(".game-platform").html(xGamedev.pages[i].platform);
+                gameBoxClone.find(".game-description").html(xGamedev.pages[i].description);
+                gameBoxClone.find(".game-image").attr("src", xGamedev.pages[i].image);
+                gameBoxClone.find("a").attr("href", xGamedev.pages[i].url);
+                $("#game-list").append(gameBoxClone);
             }
         }
     };

@@ -190,6 +190,31 @@ table td { border: 1px solid #e8e8e8; }
 
 .blog-system .grid-box:hover { text-decoration: none; }
 
+/** Game Page */
+.game-page { /*padding: 10px;*/ }
+
+.game-page .page-content { background-color: rgba(255, 255, 255, 0); }
+
+.game-page .page-description-left { max-width: calc((800px - (30px))* 0.47); text-align: justify; float: left; padding-right: 30px; }
+
+.game-page .page-description-right { max-width: calc((800px - (30px))* 0.47); text-align: justify; float: left; }
+
+.game-page button { border-radius: 5px; font-size: 15px; background-color: rgba(0, 0, 0, 0); }
+
+.game-page button:hover { opacity: 50%; cursor: pointer; }
+
+.game-list .game-container { width: 230px; height: 300px; background-color: rgba(233, 194, 242, 0.8); border-radius: 10px; border-width: 1px; float: left; margin: 10px; }
+
+.game-list .game-title { font-size: 16px; }
+
+.game-list .game-image { width: 230px; height: 130px; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+
+.game-list .game-year, .game-list .game-platform { font-size: 13px; }
+
+.game-list .game-description { font-size: 13px; overflow: hidden; text-overflow: ellipsis; height: 80px; text-align: justify; }
+
+.game-list button { float: right; border-radius: 5px; border-width: 1px; border-color: black; font-size: 13px; background-color: rgba(0, 0, 0, 0); height: 25px; width: 60px; }
+
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
 
