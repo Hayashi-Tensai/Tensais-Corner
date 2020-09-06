@@ -157,16 +157,13 @@
     });
     
     xBlog_PictGrid.GetViewCount = function (url){
-        let targetUrl = 'http://localhost:4000' + url;
+        let targetUrl = 'tensaiscorner.com' + url;
         let query = '?url=' + encodeURIComponent(targetUrl);
         let xmlHttp = new XMLHttpRequest();
         xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/nocount' + query, false);
         xmlHttp.send(null);
         count = xmlHttp.responseText;
         
-//        alert(targetUrl);
-//        alert(count);
-//        
         return count;
     };
     
