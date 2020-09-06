@@ -137,7 +137,25 @@
             <span>Narrative systems for the game, Mirage Forest. This system composed of two scripts the Narrative Database Script and the Narrative Control Script.</span>
         </li></ul>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p><!--if page.comments != false and jekyll.environment == "production-->
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/game_dev_blog/';
+      this.page.identifier = 'http://localhost:4000/game_dev_blog/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://tensais-corner.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></div>
 
       </div>
     </main><footer class="site-footer h-card">

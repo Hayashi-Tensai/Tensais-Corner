@@ -19,4 +19,8 @@ layout: default
     {%- endif -%}
   {%- endif -%}
 
+  
+    {%- if site.disqus_shortname -%}
+        {%- include disqus_comments.html -%}
+    {%- endif -%}
 </div>
