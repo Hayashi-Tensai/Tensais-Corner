@@ -3,6 +3,8 @@ layout: page
 title: About
 permalink: /about/
 navigation_weight: 99
+
+sitemap-priority: 0.9
 ---
 
 <div style="width: 30%; float: left; padding-right: 10px;">

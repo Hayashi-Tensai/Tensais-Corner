@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+sitemap-priority: 1.0
 ---
 
 Welcome to Tensai's Corner, The webisite is still in progress as I am currently importing content from my old site
