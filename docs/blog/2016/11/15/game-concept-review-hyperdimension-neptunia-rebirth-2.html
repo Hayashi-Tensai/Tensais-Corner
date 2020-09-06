@@ -99,9 +99,10 @@
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Game Concept Review: Hyperdimension Neptunia Rebirth 2</h1>
-    <p class="post-meta">
+    <p class="post-meta" style="margin-bottom: 0px">
       <time class="dt-published" datetime="2016-11-15T14:16:00+08:00" itemprop="datePublished">Nov 15, 2016
       </time>| <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Hayashi Tensai</span></span></p>
+    <p class="post-meta"><span id="viewCount"></span> views</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -154,6 +155,24 @@ it will contain a lot of spoilers of the game.</p>
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/2016/11/15/game-concept-review-hyperdimension-neptunia-rebirth-2" hidden></a>
 </article>
+
+<script>
+    var xPost = new Object();
+    
+    $(document).ready( function (){
+        xPost.IncreaseViewCount();
+    });
+    
+    xPost.IncreaseViewCount = function (){
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/count', false);
+        xmlHttp.send(null);
+        count = xmlHttp.responseText;
+        
+        $("#viewCount").html(count);
+    };
+    
+</script>
 
       </div>
     </main><footer class="site-footer h-card">

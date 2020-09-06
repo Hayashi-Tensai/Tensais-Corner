@@ -124,6 +124,7 @@
     xBlog_PictGrid.category = 
         "anime"
     ;
+    xBlog_PictGrid.activePostList = [];
     
     $(document).ready(function () {
         
@@ -139,15 +140,35 @@
                 gridBoxClone.find(".blog-title").html(xBlog_PictGrid.postList[i].title);
                 gridBoxClone.find(".blog-excerpt").html(xBlog_PictGrid.postList[i].excerpt);
 
+                xBlog_PictGrid.activePostList.push(gridBoxClone);
+                
                 $(".blog-system").append(gridBoxClone);
             }
         }
-        $(".view-count").html(0); //! temp value
         
         $(".blog-system .grid-box").click(function (e) {
             window.open($(this).attr("url"), "_self");
         });
+        
+        for(var i = 0; i < xBlog_PictGrid.activePostList.length; i++) 
+        {
+            xBlog_PictGrid.activePostList[i].find(".view-count").html(xBlog_PictGrid.GetViewCount(xBlog_PictGrid.activePostList[i].attr("href")));
+        }
     });
+    
+    xBlog_PictGrid.GetViewCount = function (url){
+        let targetUrl = 'http://localhost:4000' + url;
+        let query = '?url=' + encodeURIComponent(targetUrl);
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/nocount' + query, false);
+        xmlHttp.send(null);
+        count = xmlHttp.responseText;
+        
+//        alert(targetUrl);
+//        alert(count);
+//        
+        return count;
+    };
     
     
 </script>

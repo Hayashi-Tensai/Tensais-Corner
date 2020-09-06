@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+    <p class="post-meta" style="margin-bottom: 0px">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
@@ -13,6 +13,7 @@ layout: default
       {%- if page.author -%}
         | <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
+    <p class="post-meta"><span id="viewCount"></span> views</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -25,3 +26,21 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script>
+    var xPost = new Object();
+    
+    $(document).ready( function (){
+        xPost.IncreaseViewCount();
+    });
+    
+    xPost.IncreaseViewCount = function (){
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/count', false);
+        xmlHttp.send(null);
+        count = xmlHttp.responseText;
+        
+        $("#viewCount").html(count);
+    };
+    
+</script>

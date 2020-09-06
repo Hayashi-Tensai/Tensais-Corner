@@ -99,9 +99,10 @@
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Mirage Forest - Narrative Systems</h1>
-    <p class="post-meta">
+    <p class="post-meta" style="margin-bottom: 0px">
       <time class="dt-published" datetime="2018-08-02T10:46:00+08:00" itemprop="datePublished">Aug 2, 2018
       </time>| <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Hayashi Tensai</span></span></p>
+    <p class="post-meta"><span id="viewCount"></span> views</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -399,6 +400,24 @@ Overview of the script</p>
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/2018/08/02/narrative-systems-in-mirage-forest" hidden></a>
 </article>
+
+<script>
+    var xPost = new Object();
+    
+    $(document).ready( function (){
+        xPost.IncreaseViewCount();
+    });
+    
+    xPost.IncreaseViewCount = function (){
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/count', false);
+        xmlHttp.send(null);
+        count = xmlHttp.responseText;
+        
+        $("#viewCount").html(count);
+    };
+    
+</script>
 
       </div>
     </main><footer class="site-footer h-card">
