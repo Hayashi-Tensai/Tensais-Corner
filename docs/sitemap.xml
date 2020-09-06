@@ -6,7 +6,7 @@
     
     
     <url>
-        <loc>/gamedev/enchanter/</loc>
+        <loc>https://tensaiscorner.com/gamedev/enchanter/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -17,7 +17,7 @@
     
     
     <url>
-        <loc>/about/</loc>
+        <loc>https://tensaiscorner.com/about/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -28,7 +28,7 @@
     
     
     <url>
-        <loc>/anime_stuff/</loc>
+        <loc>https://tensaiscorner.com/anime_stuff/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -39,7 +39,7 @@
     
     
     <url>
-        <loc>/gamedev/bridge-fortress/</loc>
+        <loc>https://tensaiscorner.com/gamedev/bridge-fortress/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -50,7 +50,7 @@
     
     
     <url>
-        <loc>/game_dev_blog/</loc>
+        <loc>https://tensaiscorner.com/game_dev_blog/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -61,7 +61,7 @@
     
     
     <url>
-        <loc>/gamedev/flowin-pipeline/</loc>
+        <loc>https://tensaiscorner.com/gamedev/flowin-pipeline/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -72,7 +72,7 @@
     
     
     <url>
-        <loc>/gamedev/</loc>
+        <loc>https://tensaiscorner.com/gamedev/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -83,7 +83,7 @@
     
     
     <url>
-        <loc>/</loc>
+        <loc>https://tensaiscorner.com/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -94,7 +94,7 @@
     
     
     <url>
-        <loc>/gamedev/legend-of-the-rabbit-fiasco/</loc>
+        <loc>https://tensaiscorner.com/gamedev/legend-of-the-rabbit-fiasco/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -105,7 +105,7 @@
     
     
     <url>
-        <loc>/gamedev/mirage-forest/</loc>
+        <loc>https://tensaiscorner.com/gamedev/mirage-forest/</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -116,7 +116,7 @@
     
     
     <url>
-        <loc>/sitemap.xml</loc>
+        <loc>https://tensaiscorner.com/sitemap.xml</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -127,7 +127,7 @@
     
     
     <url>
-        <loc>/assets/main.css</loc>
+        <loc>https://tensaiscorner.com/assets/main.css</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         
@@ -141,91 +141,91 @@
 
     
     <url>
-        <loc>/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me</loc>
+        <loc>https://tensaiscorner.com/blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2019/07/19/kyoani-incident-a-sad-day-to-remember</loc>
+        <loc>https://tensaiscorner.com/blog/2019/07/19/kyoani-incident-a-sad-day-to-remember</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2019/04/16/anime-review-my-roommate-is-a-cat</loc>
+        <loc>https://tensaiscorner.com/blog/2019/04/16/anime-review-my-roommate-is-a-cat</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2019/03/13/code-improvements-camera-reset-function</loc>
+        <loc>https://tensaiscorner.com/blog/2019/03/13/code-improvements-camera-reset-function</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2019/01/10/ifrit-attack-algorithm-in-enchanter</loc>
+        <loc>https://tensaiscorner.com/blog/2019/01/10/ifrit-attack-algorithm-in-enchanter</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit fiasco</loc>
+        <loc>https://tensaiscorner.com/blog/2018/12/05/ai-systems-in-legend-of-the-rabbit fiasco</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2018/08/02/narrative-systems-in-mirage-forest</loc>
+        <loc>https://tensaiscorner.com/blog/2018/08/02/narrative-systems-in-mirage-forest</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2017/09/07/anime-review-sakurasou-no-pet-na-kanojo</loc>
+        <loc>https://tensaiscorner.com/blog/2017/09/07/anime-review-sakurasou-no-pet-na-kanojo</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2017/05/20/maigo-no-kaijuu-lyrics</loc>
+        <loc>https://tensaiscorner.com/blog/2017/05/20/maigo-no-kaijuu-lyrics</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2017/02/08/question-time-how-would-i-treat-a-loli</loc>
+        <loc>https://tensaiscorner.com/blog/2017/02/08/question-time-how-would-i-treat-a-loli</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2016/11/15/game-concept-review-hyperdimension-neptunia-rebirth-2</loc>
+        <loc>https://tensaiscorner.com/blog/2016/11/15/game-concept-review-hyperdimension-neptunia-rebirth-2</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2016/09/08/anime-review-no-game-no-life</loc>
+        <loc>https://tensaiscorner.com/blog/2016/09/08/anime-review-no-game-no-life</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>/blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu</loc>
+        <loc>https://tensaiscorner.com/blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu</loc>
         <lastmod>2020-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
