@@ -224,6 +224,34 @@
 /**
  * Page content
  */
+
+.home-naviagtion-hyperlink:hover {
+    text-decoration: none;   
+}
+
+.home-naviagtion-container{
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    .home-naviagtion-title {
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        padding-top: 55px;
+        background-color: rgba(155, 155, 155, 0.3);
+    }
+    .home-naviagtion-title:hover {
+        background-color: rgba(155, 155, 155, 0.0);
+    }
+}
+
+
+/**
+ * Page content
+ */
 .page-content {
   padding: 0;
   flex: 1;

@@ -11,7 +11,7 @@
                 </div>
                 <div class="blog-footer">
                     <img style="height: inherit" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/icon/icon-view-eye.png"/>
-                    <span style="font-size: 12px" class="view-count"></span>
+                    <span style="font-size: 12px" class="view-count">0</span>
                 </div>
             </div>
         </div>
@@ -45,6 +45,7 @@
     xBlog_PictGrid.postList = {{postList | strip_newlines}};
     xBlog_PictGrid.category = {{category}};
     xBlog_PictGrid.activePostList = [];
+    xBlog_PictGrid.arrViewCount = [];
     
     $(document).ready(function () {
         
@@ -69,10 +70,15 @@
         $(".blog-system .grid-box").click(function (e) {
             window.open($(this).attr("url"), "_self");
         });
+                
+        for(var i = 0; i < xBlog_PictGrid.activePostList.length; i++) 
+        {
+            xBlog_PictGrid.arrViewCount.push(xBlog_PictGrid.GetViewCount(xBlog_PictGrid.activePostList[i].attr("href")));
+        }
         
         for(var i = 0; i < xBlog_PictGrid.activePostList.length; i++) 
         {
-            xBlog_PictGrid.activePostList[i].find(".view-count").html(xBlog_PictGrid.GetViewCount(xBlog_PictGrid.activePostList[i].attr("href")));
+            xBlog_PictGrid.activePostList[i].find(".view-count").html(xBlog_PictGrid.arrViewCount[i]);
         }
     });
     

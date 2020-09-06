@@ -6,19 +6,20 @@ layout: home
 sitemap-priority: 1.0
 ---
 
-Welcome to Tensai's Corner, The webisite is still in progress as I am currently importing content from my old site
-
-<ul>
-    <li>
-        <a href="{{ '/anime_stuff' | relative_url }}">Anime Stuff</a>
-    </li>
-    <li>
-        <a href="{{ '/gamedev' | relative_url }}">Game Projects</a>
-    </li>
-    <li>
-        <a href="{{ '/game_dev_blog' | relative_url }}">Dev Blog</a>
-    </li>
-    <li>
-        <a href="{{ '/about' | relative_url }}">About</a>
-    </li>
-</ul>
+<html>
+    <a class="home-naviagtion-hyperlink" href="{{ '/gamedev' | relative_url }}">
+        <div class="home-naviagtion-container" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/controller-game.jpg)">
+            <div class="home-naviagtion-title">GAME PROJECTS</div>
+        </div>
+    </a>
+    <a class="home-naviagtion-hyperlink" href="{{ '/game_dev_blog' | relative_url }}">
+        <div class="home-naviagtion-container" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog.jpg)">
+            <div class="home-naviagtion-title">DEV BLOGS</div>
+        </div>
+    </a>
+    <a class="home-naviagtion-hyperlink" href="{{ '/anime_stuff' | relative_url }}">
+        <div class="home-naviagtion-container" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/honoka.png)">
+            <div class="home-naviagtion-title">ANIME BLOGS</div>
+        </div>
+    </a>
+</html>
