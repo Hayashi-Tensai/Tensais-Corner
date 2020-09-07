@@ -70,11 +70,18 @@
         $(".blog-system .grid-box").click(function (e) {
             window.open($(this).attr("url"), "_self");
         });
-                
+        
+        var urlQuery = "";
+        
         for(var i = 0; i < xBlog_PictGrid.activePostList.length; i++) 
         {
-            xBlog_PictGrid.arrViewCount.push(xBlog_PictGrid.GetViewCount(xBlog_PictGrid.activePostList[i].attr("href")));
+            if(i == 0)
+                urlQuery = "tensaiscorner.com" + xBlog_PictGrid.activePostList[i].attr("href");
+            else
+                urlQuery = urlQuery + ",tensaiscorner.com" + xBlog_PictGrid.activePostList[i].attr("href");
         }
+        
+        xBlog_PictGrid.arrViewCount = $.parseJSON(xBlog_PictGrid.GetViewCount(urlQuery));
         
         for(var i = 0; i < xBlog_PictGrid.activePostList.length; i++) 
         {
@@ -82,11 +89,10 @@
         }
     });
     
-    xBlog_PictGrid.GetViewCount = function (url){
-        let targetUrl = 'tensaiscorner.com' + url;
-        let query = '?url=' + encodeURIComponent(targetUrl);
+    xBlog_PictGrid.GetViewCount = function (urlQuery){
+        let query = '?url=' + encodeURIComponent(urlQuery);
         let xmlHttp = new XMLHttpRequest();
-        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/nocount' + query, false);
+        xmlHttp.open('GET', 'https://hayashitensai.pythonanywhere.com/nocount/multiple' + query, false);
         xmlHttp.send(null);
         count = xmlHttp.responseText;
         
