@@ -19,7 +19,7 @@ image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/as
         </div>
     </a>
     <a class="home-naviagtion-hyperlink" href="{{ '/anime_stuff' | relative_url }}">
-        <div class="home-naviagtion-container" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/honoka.png)">
+        <div class="home-naviagtion-container" style="background-image: url(https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/honoka.jpg)">
             <div class="home-naviagtion-title">ANIME BLOGS</div>
         </div>
     </a>
