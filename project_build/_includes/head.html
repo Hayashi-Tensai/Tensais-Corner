@@ -2,7 +2,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="{{site.domain}}{{page.url}}" />
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     {%- feed_meta -%}
@@ -11,4 +10,9 @@
     {%- endif -%}
     <script src="{{"./assets/js/jquery-3.5.1.min.js" | relative_url }}"></script>
     <script src="{{"./assets/js/youtube-autoresizer.js" | relative_url }}"></script>
+    
+    <script>
+        document.querySelector('meta[property="og:url"]').setAttribute("content", "{{site.domain}}{{page.url}}");
+        document.querySelector('link[rel="canonical"]').setAttribute("href", "{{site.domain}}{{page.url}}");
+    </script>
 </head>
