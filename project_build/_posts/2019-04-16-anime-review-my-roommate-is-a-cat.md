@@ -6,7 +6,7 @@ excerpt: Konnchiwa! It has been almost 2 years since I wrote an anime review. Th
 permalink: blog/2019/04/16/anime-review-my-roommate-is-a-cat
 date:   2019-04-16 15:24:00 +0800
 categories: anime anime-review
-bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg
+image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg
 ---
 
 ![My-Roommate-is-a-Cat-poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg)  

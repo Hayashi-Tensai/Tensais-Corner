@@ -24,7 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
     Personal Portfolio and Blogs
 copyright: © 2017 - 2020 Hayashi Tensai
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "tensaiscorner.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tensaiscorner.com" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "https://tensaiscorner.com"
 twitter_username: HayashiTensai
 github_username:  Hayashi-Tensai
 disqus_shortname: tensais-corner

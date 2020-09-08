@@ -4,6 +4,7 @@
 
 layout: home
 sitemap-priority: 1.0
+image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog.jpg
 ---
 
 <html>

@@ -6,7 +6,7 @@ excerpt: こんにちは、皆さん！Konnichiwa minna-san! Today I am going to
 permalink: blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu
 date:   2016-07-19 19:28:00 +0800
 categories: anime anime-review
-bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/re_zero.jpg
+image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/re_zero.jpg
 ---
 
 Warning! Minor Spoilers

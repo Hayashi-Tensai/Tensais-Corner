@@ -6,7 +6,7 @@ excerpt: Konnichiwa minna! Today i would like to share another good anime i have
 permalink: blog/2016/09/08/anime-review-no-game-no-life
 date:   2016-09-08 11:23:00 +0800
 categories: anime anime-review
-bg_url: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/No_game_no_life.jpg
+image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/No_game_no_life.jpg
 slideShow:
 - https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_1.png
 - https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/ngnl_town_2.png

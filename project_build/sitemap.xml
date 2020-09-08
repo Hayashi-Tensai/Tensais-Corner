@@ -9,9 +9,9 @@ search: exclude
     {% for page in site.pages %}
     {% if page.sitemap != false %}
     <url>
-        <loc>https://tensaiscorner.com{{page.url}}</loc>
+        <loc>{{site.domain}}{{page.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>monthly</changefreq>
         {% if page.sitemap-priority %}
             <priority>{{page.sitemap-priority}}</priority>
         {% else %}
@@ -23,7 +23,7 @@ search: exclude
 
     {% for post in site.posts %}
     <url>
-        <loc>https://tensaiscorner.com{{post.url}}</loc>
+        <loc>{{site.domain}}{{post.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
