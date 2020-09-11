@@ -19,14 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Tensai's Corner
-email: thianchaiphromsuwan@gmail.com
+email: tensaiscorner@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Personal Portfolio and Blogs
 copyright: © 2017 - 2020 Hayashi Tensai
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tensaiscorner.com" # the base hostname & protocol for your site, e.g. http://example.com
 domain: "https://tensaiscorner.com"
-twitter_username: HayashiTensai
 github_username:  Hayashi-Tensai
 disqus_shortname: tensais-corner
 

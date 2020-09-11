@@ -25,5 +25,3 @@ On the other hand, I also really admire the Japanese culture when it comes to th
 work pride and efficiency and as well as the richness in their traditional culture. 
 
 Hope to write more in the future! :D
-
-If you would like to contact me, you can email me at thianchaiphromsuwan@gmail.com
