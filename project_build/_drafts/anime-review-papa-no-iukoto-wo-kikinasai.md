@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Anime Review: Papa no Iukoto wo Kikinasai"
+author: Hayashi Tensai
+excerpt: 
+date: 
+categories: anime anime-review
+image: 
+---
+
 (Warning! Spoilers up to around Episode 2)
 
 Konbanwa, today we will looking at anime that came out quite a while back in 2012 called Papa no Iukoto wo Kikinasai! or in short PapaKiki. So a short synopsis, Segawa Yuuta, a college freshman has been placed to care for three of his nieces, Hina, Miu and Sora while his sister,Yuri and her husband go off on a trip. But an incident strike upon Yuri and her husband, and the Yuuta decided to to take the three of them in to prevent the three of them from being split up.
