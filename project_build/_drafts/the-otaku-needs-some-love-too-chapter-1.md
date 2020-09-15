@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "The Otaku Needs Some Love Too! Chapter 1"
+author: Hayashi Tensai
+excerpt: 
+permalink:
+date: 
+categories: anime anime-review
+image: 
+---
+
 Click Clack Click Clack Click Clack...
 The sound of keyboard of typing echoes the office as the whole team is rushing a deadline for some fancy business solutions program the bosses are so excited about... which frankly speaking there's nothing fancy about it, just a messy piece of code that is a sorry excuse for a program. I just got hired to this company not too long ago after the previous company I worked with ran out of business. I'm Amane Masami, a 25 years old average and boring programmer, and most importantly still single.
 
