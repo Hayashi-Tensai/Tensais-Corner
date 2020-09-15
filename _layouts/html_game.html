@@ -15,3 +15,18 @@ layout: default
         {%- include disqus_comments.html -%}
     {%- endif -%}
 </div>
+
+<script>
+    //! keys to block default behaviour for HTML5 games
+    var arrKeys = new Array(37,38,39,40);
+    
+    $(document).keydown(function (e) {
+        var key = e.which;
+        if($.inArray(key, arrKeys) > -1) {
+            e.preventDefault();
+            return false;
+        }
+        return true;
+    });
+    
+</script>
