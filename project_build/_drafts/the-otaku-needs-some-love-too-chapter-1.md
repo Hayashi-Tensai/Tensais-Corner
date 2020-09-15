@@ -5,7 +5,7 @@ author: Hayashi Tensai
 excerpt: 
 permalink:
 date: 
-categories: anime anime-review
+categories: anime
 image: 
 ---
 
