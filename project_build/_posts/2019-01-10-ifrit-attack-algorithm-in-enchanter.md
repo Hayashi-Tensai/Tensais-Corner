@@ -200,5 +200,5 @@ void PhaseThree () {
 In the last part of PhaseTwo() it has a condition to check if Ifrit's health is at zero, and if the condition holds true, it will update the phaseCounter to 3.
 
 In phase 3, several short sentences will appear and the player will have to finish typing all of it within 35 seconds to clear the stage , if the player fails to do so, it will regain 10% of its health and revert back to phase 2.
-<div>{%- include slideShow.html images=page.slideshow -%}</div>
+<div>{%- include slideshow.html images=page.slideshow -%}</div>
 Above: The final type sequence of phase 3.

@@ -40,7 +40,7 @@ The opening and ending song really matches to the theme of the of the story and 
 </iframe><br>
 
 **Art and Animation 9/10**  
-<div>{%- include slideShow.html images=page.slideShow -%}</div>
+<div>{%- include slideshow.html images=page.slideShow -%}</div>
 
 The art is not one of the best I have seen so far but it is simple yet nice. And most importantly the art style was consistent over the span of 24 episodes. 
 

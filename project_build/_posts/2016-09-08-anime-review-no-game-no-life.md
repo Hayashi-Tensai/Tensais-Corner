@@ -52,6 +52,6 @@ The town has a really interesting design of having that vibe of an old town, the
 Character Design  
 Overall i would say the characters are quite detailed compared to other anime(s) out there, but still i would not comment much on this because my art suck to be honest.
 
-<div>{%- include slideShow.html images=page.slideShow -%}</div>
+<div>{%- include slideshow.html images=page.slideShow -%}</div>
 
 In conclusion, i would really comment this anime as it has a lot of fun and adventure with strategies and tricks along the way.
