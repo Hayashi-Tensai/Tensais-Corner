@@ -3,6 +3,7 @@ layout: post
 title:  "Anime Review: Papa no Iukoto wo Kikinasai"
 author: Hayashi Tensai
 excerpt: 
+permalink:
 date: 
 categories: anime anime-review
 image: 
