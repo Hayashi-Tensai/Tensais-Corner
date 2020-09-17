@@ -25,3 +25,5 @@ On the other hand, I also really admire the Japanese culture when it comes to th
 work pride and efficiency and as well as the richness in their traditional culture. 
 
 Hope to write more in the future! :D
+
+*You may also view the source code to this website at [https://github.com/Hayashi-Tensai/Tensais-Corner](https://github.com/Hayashi-Tensai/Tensais-Corner)*
