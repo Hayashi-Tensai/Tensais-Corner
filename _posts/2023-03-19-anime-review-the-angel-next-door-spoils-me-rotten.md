@@ -13,7 +13,7 @@ image: /assets/blog-images/anime/the-angel-next-door-spoils-me-rotten-poster.web
 
 Konbanwa! This time I’m back with a really good romance anime I watched recently called The Angel Next Door Spoils Me Rotten (Romanji: Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken). It’s a Winter 2023 anime and still airing at the time of writing. There is quite number of good animes this season and this one really takes the cake.
 
-Before I start, I have to warn you, this anime is a diabetes overload. The interactions between main characters Mahiru and Amane is just too cute. So the story starts of with Mahiru being the perfect “Angel” in the class, and Amane is a bit of a less approachable one. One rainy day, there is a fateful encounter between two, starting off with Amane doing doing her a favour. But it was after this first encounter, Mahiru gets to know of Anane’s untidy and unhealthy lifesytle, she then go worried and started helping him cook and clean.
+Before I start, I have to warn you, this anime is a diabetes overload. The interactions between main characters Mahiru and Amane is just too cute. So the story starts off with Mahiru being the perfect “Angel” in the class, and Amane is a bit of a less approachable one. One rainy day, there is a fateful encounter between two, starting off with Amane doing doing her a favour. But it was after this first encounter, Mahiru gets to know of Anane’s untidy and unhealthy lifesytle, she then go worried and started helping him cook and clean.
 
 Over the course of the story, the anime explored the aspects of both their characters in the story, and as it goes along and just gets even sweeter.
 
