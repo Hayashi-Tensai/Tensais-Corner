@@ -6,10 +6,10 @@ excerpt: Konbanwa, Today I will be reviewing one of KyoAni's masterpieces, Chuun
 permalink: blog/2020/06/10/anime-review-chuunibyou-demo-koi-ga-shitai-movie-take-on-me
 date:   2020-06-10 21:10:00 +0800
 categories: anime anime-review
-image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chunnibyou-movie-poster.jpg
+image: /assets/blog-images/anime/chunnibyou-movie-poster.jpg
 ---
 
-![Chunnibyou-Movie-Poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chunnibyou-movie-poster.jpg)  
+![Chunnibyou-Movie-Poster](/assets/blog-images/anime/chunnibyou-movie-poster.jpg)  
 (Warning! contains minor spoilers, certain parts of the review would refer to prior knowledge after the events of season 1)
 
 Konbanwa, Today I will be reviewing one of KyoAni's masterpieces, Chuunibyou demo Koi ga Shitai! but i will be focusing the review more on the movie. 

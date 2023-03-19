@@ -6,10 +6,10 @@ excerpt: Konnchiwa! It has been almost 2 years since I wrote an anime review. Th
 permalink: blog/2019/04/16/anime-review-my-roommate-is-a-cat
 date:   2019-04-16 15:24:00 +0800
 categories: anime anime-review
-image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg
+image: /assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg
 ---
 
-![My-Roommate-is-a-Cat-poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg)  
+![My-Roommate-is-a-Cat-poster](/assets/blog-images/anime/my-roommate-is-a-cat-poster.jpg)  
 *(Japanese Title: Doukyonin wa Hiza, Tokidoki, Atama no Ue)*
 
 Konnchiwa! It has been almost 2 years since I wrote an anime review. This is an anime that just came last season of Winter 2019. I have watched it till episode 7 on the time of writting and I find it very enjoyable. Without futher ado, let's get into the review.
@@ -22,7 +22,7 @@ I would say Sabaru as a character can be quite interesting. Being introverted, h
 Another interesting point of this show is that the second half of each episode features the events of the episode from the Haru's perpective, which is pretty cute I would say. At times, she would try to help Subaru through his daily life and Subaru ends up misunderstanding her actions. It's pretty entertaining to see what they have in each other's minds and how they interpret one another being a human and a cat.
 
 On side note, Haru, being a cat also hit the the the top number one spot on anitrendz.net top female characters charts, which is pretty impressive for a cat xD.  
-<img style="max-width:80%;" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/haru-ranking.png"/>
+<img style="max-width:80%;" src="/assets/blog-images/anime/haru-ranking.png"/>
 
 I would say the story is pretty wholesome overall, I'll give it a 10/10 for storyline.
 

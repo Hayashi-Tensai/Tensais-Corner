@@ -2,7 +2,7 @@
 layout: game_page
 title: Bridge Fortress
 permalink: /gamedev/bridge-fortress/
-background: "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/bridge-fortress-bg.png"
+background: "/assets/blog-images/game-dev/bridge-fortress-bg.png"
 color: "#F7CF83"
 video_url: https://www.youtube.com/embed/7dIfFvjpO7k
 gameplay: Bridge Fortress is a puzzle-adventure game where the player takes on the role of a knight’s rational squire. The player manipulates the bridges to help the knight to move around enemies and reach the end of each level.
@@ -12,7 +12,7 @@ is_glenmarie_games: 1
 game_order: 2
 year: 2017
 platform: Android
-image: "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/bridge-fortress-logo.jpg"
+image: "/assets/blog-images/game-dev/bridge-fortress-logo.jpg"
 description: Bridge Fortress is a puzzle-adventure game where the player takes on the role of a knight’s rational squire. The player manipulates the bridges to help the knight to move around enemies and reach the end of each level.
 ---
 
@@ -20,7 +20,7 @@ description: Bridge Fortress is a puzzle-adventure game where the player takes o
 2017 | Android
 
 <div style="width: 50%; float: right;">
-    <img src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/tavern-fire-logo.png"/>
+    <img src="/assets/blog-images/game-dev/tavern-fire-logo.png"/>
 </div>
 
 **Lead Programmer**  

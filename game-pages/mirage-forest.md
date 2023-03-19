@@ -2,8 +2,8 @@
 layout: game_page
 title: Mirage Forest
 permalink: /gamedev/mirage-forest/
-background: "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/mirage-forest_bg.png"
-description-image: "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/mirage-forest.png"
+background: "/assets/blog-images/game-dev/mirage-forest_bg.png"
+description-image: "/assets/blog-images/game-dev/mirage-forest.png"
 color: "#F0FFB3"
 gameplay: Mirage forest is narrative driven adventure game.<br><br>Notes<br>The project did not reach its completion state.
 itch_url: https://kdu.itch.io/mirageforest
@@ -13,7 +13,7 @@ category: mirage-forest
 game_order: 4
 year: 2018
 platform: Windows PC
-image: "https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/mirage-forest.png"
+image: "/assets/blog-images/game-dev/mirage-forest.png"
 description: Kaizen wakes up and finds he has amnesia and has awoken in a mysterious world and he vaguely remembers is that he is searching for his “waifu”. Thus he begins his search to find clues on where the waifu could be.
 ---
 

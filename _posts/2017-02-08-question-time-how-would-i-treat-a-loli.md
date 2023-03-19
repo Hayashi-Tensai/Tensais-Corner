@@ -6,10 +6,10 @@ excerpt: Konnichiwa! It has been a while since i wrote a post and i thought this
 permalink: blog/2017/02/08/question-time-how-would-i-treat-a-loli
 date:   2017-02-08 09:23:00 +0800
 categories: anime question-time
-image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chino.jpg
+image: /assets/blog-images/anime/chino.jpg
 ---
 
-![Chino image](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/chino.jpg)
+![Chino image](/assets/blog-images/anime/chino.jpg)
 
 Konnichiwa! It has been a while since i wrote a post and i thought this would be an interesting to talk about. And also do share your opinions in the comments below :)
 

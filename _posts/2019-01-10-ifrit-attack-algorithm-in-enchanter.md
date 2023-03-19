@@ -7,10 +7,10 @@ permalink: blog/2019/01/10/ifrit-attack-algorithm-in-enchanter
 date:   2019-01-10 20:58:00 +0800
 categories: game-development enchanter
 slideshow:
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-1.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-2.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-3.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-3-4.jpg
+- /assets/blog-images/game-dev/enchanter-phase-3-1.jpg
+- /assets/blog-images/game-dev/enchanter-phase-3-2.jpg
+- /assets/blog-images/game-dev/enchanter-phase-3-3.jpg
+- /assets/blog-images/game-dev/enchanter-phase-3-4.jpg
 ---
 
 View the full script at: 
@@ -41,7 +41,7 @@ First there is this PhaseController() that takes control which phase to call.
 
 Now's let look into phase 1. In phase 1 if the player stays on one platform for more than 5 seconds Ifrit will start lighting the platform on fire.
 
-![enchanter-phase-1](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-1.jpg)
+![enchanter-phase-1](/assets/blog-images/game-dev/enchanter-phase-1.jpg)
 
 ```csharp
 void PhaseOne () {
@@ -116,10 +116,10 @@ Once if goes beyond it stops checking on the player's current position and proce
 After the 8th second, the pillar of fire comes up and stays for 3 seconds before setting the timer back to zero and repeating the function loop.
 
 In phase 2, Ifrit remains the fire pillar attack, and adds two more attack types to its attack pattern, the fire meteor and fire wave. Phase 2 starts when Ifrit's health falls below 50%.
-![enchanter-phase-2-fireball](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-2-fireball.jpg)
+![enchanter-phase-2-fireball](/assets/blog-images/game-dev/enchanter-phase-2-fireball.jpg)
 Above: The fire meteor
 
-![enchanter-phase-2-wave](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/enchanter-phase-2-wave.jpg)
+![enchanter-phase-2-wave](/assets/blog-images/game-dev/enchanter-phase-2-wave.jpg)
 Above: The fire wave
 
 ```csharp

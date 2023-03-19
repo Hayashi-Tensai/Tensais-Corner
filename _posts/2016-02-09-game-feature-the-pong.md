@@ -14,26 +14,26 @@ Let me explain a bit about this game.
  
 As this was my first game it had a very simple menu design
 
-![The Pong Menu](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/the-pong-menu.png)
+![The Pong Menu](/assets/blog-images/game-dev/the-pong-menu.png)
 
 This game featured 4 maps.
  
 Classic: 
 This map is similar to the 8-bit version of Pong   
-![The Pong Classic](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/the-pong-classic.png)  
+![The Pong Classic](/assets/blog-images/game-dev/the-pong-classic.png)  
 
  
 Space:  
 This map features an addition of portals, that teleports the ball randomly when the ball enters the portal   
-![The Pong Space](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/the-pong-space.png)  
+![The Pong Space](/assets/blog-images/game-dev/the-pong-space.png)  
 
 Snow:  
 This map features two automatic snow paddles and snow walls at the top and bottom  
-![The Pong Snow](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/the-pong-snow.png)  
+![The Pong Snow](/assets/blog-images/game-dev/the-pong-snow.png)  
 
 Bounce:  
 Last but not least, a map with a lot of annoying bouncy balls  
-![The Pong Bounce](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/the-pong-bounce.png)  
+![The Pong Bounce](/assets/blog-images/game-dev/the-pong-bounce.png)  
 
 Last but not least, a map with a lot of annoying bouncy balls
  

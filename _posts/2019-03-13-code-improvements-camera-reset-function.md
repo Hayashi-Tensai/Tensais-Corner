@@ -15,21 +15,21 @@ Today I will be featuring part of the script that I will be using for an ongoing
 
 Firstly let's look into the hierarchy of the player, the script is located on the **Player GameObject** (I'll call this as **"parent"**) of the highest hierarchy and has the **camera** and the **character model** as the children.
 
-<img style="max-width:80%;" src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/camera-reset-1.png" />
+<img style="max-width:80%;" src="/assets/blog-images/game-dev/camera-reset-1.png" />
 
 Here are two different clips featuring the effects of the old scripts and the new scripts.
 
 **Scenario 1: Both models are set to face left and then reset camera is pressed.**
-![Camera Reset Left Old](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/camera-reset-left-old.gif)  
+![Camera Reset Left Old](/assets/blog-images/game-dev/camera-reset-left-old.gif)  
 Old : camera turns counter-clockwise, taking the long way around.
 
-![Camera Reset Left New](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/camera-reset-left-new.gif)  
+![Camera Reset Left New](/assets/blog-images/game-dev/camera-reset-left-new.gif)  
 New : camera turns clockwise, taking the shortest path
 
 **Scenario 2: Both models are set to face right and then reset camera is pressed.**
-![Camera Reset Right Old](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/camera-reset-right-old.gif)
+![Camera Reset Right Old](/assets/blog-images/game-dev/camera-reset-right-old.gif)
 
-![Camera Reset Right New](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/game-dev/camera-reset-right-new.gif)  
+![Camera Reset Right New](/assets/blog-images/game-dev/camera-reset-right-new.gif)  
 Both turns clockwise in this scenario
 
 Following on, the scripts. Let's look at the old script first.

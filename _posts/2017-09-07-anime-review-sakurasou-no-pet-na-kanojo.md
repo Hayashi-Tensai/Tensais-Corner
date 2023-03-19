@@ -6,17 +6,17 @@ excerpt: Konnichiwa! Today I'm back with a new review of an anime I have recentl
 permalink: blog/2017/09/07/anime-review-sakurasou-no-pet-na-kanojo
 date:   2017-09-07 15:08:00 +0800
 categories: anime anime-review
-image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_poster.jpg
+image: /assets/blog-images/anime/sakurasou_poster.jpg
 slideShow:
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_1.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_2.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_3.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_4.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_5.jpg
-- https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_6.jpg
+- /assets/blog-images/anime/sakurasou_1.jpg
+- /assets/blog-images/anime/sakurasou_2.jpg
+- /assets/blog-images/anime/sakurasou_3.jpg
+- /assets/blog-images/anime/sakurasou_4.jpg
+- /assets/blog-images/anime/sakurasou_5.jpg
+- /assets/blog-images/anime/sakurasou_6.jpg
 ---
 
-![Sakurasou-poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/sakurasou_poster.jpg)
+![Sakurasou-poster](/assets/blog-images/anime/sakurasou_poster.jpg)
 
 Konnichiwa! Today I'm back with a new review of an anime I have recently watched. The is anime is really a masterpiece of a kind so do sit back and read through the review.
 

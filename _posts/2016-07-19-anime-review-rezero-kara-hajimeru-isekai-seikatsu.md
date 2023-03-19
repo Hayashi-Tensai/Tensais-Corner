@@ -6,7 +6,7 @@ excerpt: こんにちは、皆さん！Konnichiwa minna-san! Today I am going to
 permalink: blog/2016/07/19/anime-review-rezero-kara-hajimeru-isekai-seikatsu
 date:   2016-07-19 19:28:00 +0800
 categories: anime anime-review
-image: https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/re_zero.jpg
+image: /assets/blog-images/anime/re_zero.jpg
 ---
 
 Warning! Minor Spoilers
@@ -17,7 +17,7 @@ This review is made based on Episode 1-15
 
 So as for today i am going to write a review on this anime most commonly known as Re: Zero.
 
-![Re-Zero_Poster](https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/blog-images/anime/re_zero.jpg)
+![Re-Zero_Poster](/assets/blog-images/anime/re_zero.jpg)
 
 A friend of mine asked me to give a review on this anime, so i decided to make this my first blog post.
 

@@ -8,7 +8,7 @@ sitemap-priority: 0.9
 ---
 
 <div style="width: 30%; float: left; padding-right: 10px;">
-    <img src="https://raw.githubusercontent.com/Hayashi-Tensai/Tensais-Corner/master/assets/selfie.jpg"/>
+    <img src="/assets/selfie.jpg"/>
 </div>
 
 Hi, welcome to my website where I showcase my work and also write some other stuff. First, let me introduce myself, I go by many names and I'll list it down below:  
