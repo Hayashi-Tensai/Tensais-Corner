@@ -26,4 +26,4 @@ work pride and efficiency and as well as the richness in their traditional cultu
 
 Hope to write more in the future! :D
 
-<!-- *You may also view the source code to this website at [https://github.com/Hayashi-Tensai/Tensais-Corner](https://github.com/Hayashi-Tensai/Tensais-Corner)* -->
+*You may also view the source code to this website at [https://github.com/Hayashi-Tensai/Tensais-Corner](https://github.com/Hayashi-Tensai/Tensais-Corner)*
