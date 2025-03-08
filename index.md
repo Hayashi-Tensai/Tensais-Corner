@@ -8,9 +8,9 @@ image: /assets/blog.jpg
 ---
 
 <html>
-    <a class="home-naviagtion-hyperlink" href="{{ '/gamedev' | relative_url }}">
+    <a class="home-naviagtion-hyperlink" href="{{ '/portfolio' | relative_url }}">
         <div class="home-naviagtion-container" style="background-image: url(/assets/controller-game.jpg)">
-            <div class="home-naviagtion-title">GAME PROJECTS</div>
+            <div class="home-naviagtion-title">PROJECTS PORFOLIO</div>
         </div>
     </a>
     <a class="home-naviagtion-hyperlink" href="{{ '/game_dev_blog' | relative_url }}">

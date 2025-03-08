@@ -6,7 +6,7 @@
       <div class="wrapper">
         <body id="body" class="game-page" style="{%- if page.background -%}background-image: url({{page.background}});
             {%- endif -%}{%- if page.color -%}color: {{page.color}};{%- endif -%}">
-            <a href="{{"./gamedev/" | relative_url}}">
+            <a href="{{"./portfolio/" | relative_url}}">
                 <button style="{%- if page.color -%}color: {{page.color}}; border-color: {{page.color}}{%- endif -%}">< Back</button>
             </a>
             {%- if page.title -%}
@@ -28,6 +28,12 @@
                         <u><strong>Gameplay</strong></u>
                         <div style="padding-bottom: 15px;">
                             {{page.gameplay}}
+                        </div>
+                    {%- endif -%}
+                    {%- if page.long_description -%}
+                        <u><strong>Description</strong></u>
+                        <div style="padding-bottom: 15px;">
+                            {{page.long_description}}
                         </div>
                     {%- endif -%}
                     {%- if page.itch_url -%}

@@ -1,7 +1,7 @@
 ---
 layout: game_page
 title: Legend of the Rabbit Fiasco
-permalink: /gamedev/legend-of-the-rabbit-fiasco/
+permalink: /portfolio/legend-of-the-rabbit-fiasco/
 background: "/assets/blog-images/game-dev/legend-of-the-rabbit-fiasco_bg.png"
 color: white
 gameplay: It is an action/beat-em-up game where you play as a witch against the rabbit fiasco. Your goal is to survive 60 seconds and achieve the highest score.

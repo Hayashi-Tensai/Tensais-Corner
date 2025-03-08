@@ -1,7 +1,7 @@
 ---
 layout: game_page
 title: Bridge Fortress
-permalink: /gamedev/bridge-fortress/
+permalink: /portfolio/bridge-fortress/
 background: "/assets/blog-images/game-dev/bridge-fortress-bg.png"
 color: "#F7CF83"
 video_url: https://www.youtube.com/embed/7dIfFvjpO7k

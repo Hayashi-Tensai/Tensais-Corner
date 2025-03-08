@@ -1,7 +1,7 @@
 ---
 layout: game_page
 title: Flow'n Pipeline
-permalink: /gamedev/flowin-pipeline/
+permalink: /portfolio/flowin-pipeline/
 background: "/assets/blog-images/game-dev/flowin-pipeline_bg.png"
 color: "#F7CF83"
 windows_url: https://drive.google.com/uc?export=download&id=1CtV-PrYluHxwPCdX06x8IRyDIXGq8YR4

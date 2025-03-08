@@ -1,7 +1,7 @@
 ---
 layout: game_page
 title: Mirage Forest
-permalink: /gamedev/mirage-forest/
+permalink: /portfolio/mirage-forest/
 background: "/assets/blog-images/game-dev/mirage-forest_bg.png"
 description-image: "/assets/blog-images/game-dev/mirage-forest.png"
 color: "#F0FFB3"

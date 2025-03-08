@@ -13,6 +13,10 @@ layout: default
     {%- if page.theme_pictGrid -%}
         {%- include blog-listing_picture-grid.html category=page.category -%}
     {%- endif -%}
+
+    {%- if page.theme_long_box -%}
+        {%- include blog-listing_long_box.html category=page.category -%}
+    {%- endif -%}
     
     {%- if page.theme_plain -%}
         {%- include blog-listing_plain.html category=page.category -%}

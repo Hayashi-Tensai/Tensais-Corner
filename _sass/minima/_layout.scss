@@ -407,6 +407,61 @@
     .grid-box:hover {
         text-decoration: none;
     }
+
+    .long-box{
+      height: 200px;
+      background-color: rgba(233, 194, 242, 0.8);
+      border-radius: 10px;
+      border-width: 1px;
+      float: left;
+      margin: 10px;
+      padding: 20px;
+      
+      .long-box-content{
+          padding: 10px;
+      }
+
+      .blog-header{
+        color: black;
+      }
+
+      .blog-title{
+        font-size: 30px;
+        line-height: normal;
+        align-items: flex-end;
+        display: flex;
+        color: black;
+      }
+
+      .blog-excerpt{
+        font-size: 15px;
+        line-height: normal;
+        height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: justify;
+        color: black;
+      }
+
+      hr{
+        margin-bottom: 10px;
+      }
+
+      button {
+        float: right;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: black;
+        font-size: 13px;
+        background-color: rgba(0,0,0,0);
+        height: 25px;
+        width: 60px;
+    }
+    }
+
+    .long-box:hover {
+      text-decoration: none;
+  }
 }
 
 
@@ -418,7 +473,7 @@
     /*padding: 10px;*/
     
     .page-content {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, 0.3);
     }
     
     .page-description-left {

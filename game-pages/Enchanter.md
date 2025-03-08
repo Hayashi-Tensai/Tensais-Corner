@@ -1,7 +1,7 @@
 ---
 layout: game_page
 title: Enchanter
-permalink: /gamedev/enchanter/
+permalink: /portfolio/enchanter/
 background: "/assets/blog-images/game-dev/enchanter-bg.png"
 color: white
 video_url: https://www.youtube.com/embed/NnjpDIuTDTk
